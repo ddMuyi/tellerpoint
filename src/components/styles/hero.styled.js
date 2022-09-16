@@ -1,0 +1,248 @@
+import styled from "styled-components";
+
+export const HeroContainer = styled.div`
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    padding-bottom:4rem;
+    padding-top:1rem;
+    overflow:hidden;
+
+    @media(min-width:${({theme})=>theme.screen.tablet}){
+        flex-direction:row;
+    }
+`
+
+export const LeftHeroContainer = styled.div`
+    width:100%;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    position:relative;
+
+    @media(min-width:${({theme})=>theme.screen.tablet}) {
+        width:55%;
+        gap:32px;
+    }
+
+    @media(min-width:${({theme})=>theme.screen.laptopM}) {
+        width:55%;
+        gap:32px;
+    }
+`
+
+export const LeftHeroMiniContainer = styled.div`
+    width:auto;
+    height:auto;
+    display:inline-block;
+`
+
+export const RightHeroContainer = styled.div`
+    width:100%;
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-end;
+    position:relative;
+    margin-top:2rem;
+
+    @media(min-width:${({theme})=>theme.screen.tablet}) {
+        width:45%;
+        margin-top:0;
+    }
+
+    @media(min-width:${({theme})=>theme.screen.laptopM}) {
+        width:45%;
+        margin-top:0;
+    }
+`
+
+export const RightHeroInnerContainer = styled.div`
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    position:relative;
+    margin-top:4rem;
+
+    @media(min-width:${({theme})=>theme.screen.tablet}) {
+        width:90%;
+        margin-top:0;
+    }
+
+    @media(min-width:${({theme})=>theme.screen.laptopM}) {
+        width:80%;
+        gap:32px;
+        margin-top:0;
+    }
+`
+
+export const HeroImage = styled.img.attrs(props=>({
+    src:props.src
+}))`
+    width:${props => props.full ? '100%' : props.small ? 'calc(40% - 4px)' : props.bigger ? 'calc(60% - 4px)' : 'calc(50% - 4px)'};
+    height:auto;
+
+    @media(min-width:${({theme})=>theme.screen.laptopM}) {
+        width:${props => props.full ? '100%' : props.small ? 'calc(40% - 16px)' : props.bigger ? 'calc(60% - 16px)' : 'calc(50% - 16px)'};
+    }
+`
+
+export const HeroHeader = styled.header`
+    text-align:left;
+
+    &> .welcome {
+        background-color:${({theme})=>theme.colors.light_primary};
+        text-transform:uppercase;
+        color:${({theme})=>theme.colors.primary};
+        font-weight:500;
+        display:inline-flex;
+        border-radius:999px;
+        padding:9.5px 16px;
+        font-size:12px;
+
+        @media(min-width:${({theme})=>theme.screen.laptopM}){
+            font-size:16px;
+        }
+
+        & > .wave {
+            animation:wavehand 2s ease infinite;
+        }
+
+        @keyframes wavehand {
+            0% {transform:rotate(0deg)}
+            50% {transform:rotate3d(1,0,1, 20deg)}
+            100% {transform:rotate(0deg)}
+        }
+    }
+
+    & > .introduction {
+        font-size:1.2rem;
+        margin-top:24px;
+        line-height:2rem;
+        font-weight:500;
+    }
+
+    & > .main-header {
+        font-size:1rem;
+        font-weight:600;
+        display:inline-block;
+        margin-top:24px;
+
+        @media(min-width:${({theme})=>theme.screen.laptopM}){
+            font-size:1.7rem;
+        }
+
+        & > .second-line {
+            display:flex;
+            gap:16px;
+
+            & > .second-line-img {
+                width: 38px;
+                height:auto;
+
+                @media(min-width:${({theme})=>theme.screen.laptopM}){
+                    width:auto;
+                }
+            }
+        }
+
+        & > .third-line {
+            height:2rem;
+            color:${({theme})=>theme.colors.primary};
+            overflow:hidden;
+
+            @media(min-width:${({theme})=>theme.screen.laptopM}){
+                height:3.5rem;
+            }
+
+            & > .animate-texts{
+                animation:scroll 8s linear infinite;
+
+                @keyframes scroll {
+                    0%{transform:translateY(0)}
+                    1%{transform:translateY(-27%)}
+                    50%{transform:translateY(-27%)}
+                    51%{transform:translateY(-52%)}
+                    100%{transform:translateY(-52%)}
+                    /* 0%{} */
+                }
+
+                & > h1 {
+                    color:${({theme})=>theme.colors.primary};
+                    display:flex;
+                    align-items:center;
+                    justify-content:flex-start;
+                    gap:16px;
+                }
+            }
+        }
+    }
+`
+
+export const HeroButton = styled.a.attrs((props)=>({
+    href:props.href
+}))`
+    width:auto;
+    height:48px;
+    background-color:${({theme})=>theme.colors.primary};
+    color:white;
+    border:none;
+    border-radius:9999px;
+    padding:0px 12px;
+    font-size:1.1rem;
+    font-weight:500;
+    margin-top:32px;
+    display:inline-flex;
+    align-items:center;
+    text-decoration:none;
+    gap:22px;
+    
+    &:hover{
+        cursor:pointer;
+    }
+    
+
+    @media(min-width:${({theme})=>theme.screen.tablet}){
+        margin-top:56px;
+        padding:0px 48px;
+        height:64px;
+        font-size:1.2rem;
+    }
+
+    & > div {
+        transition:0.5s ease;
+    }
+`
+
+export const Br = styled.br`
+    display:none;
+    @media(min-width:${({theme})=>theme.screen.laptopM}){
+        display:block;
+    }
+`
+
+export const HeroAesthetic = styled.img.attrs(props=>({
+    src:props.src
+}))`
+    width:auto;
+    height:auto;
+    position:absolute;
+    bottom:0;
+    right:0;
+    animation:wave 20s ease-in-out infinite;
+    display:none;
+
+    /* @media(min-width:${({theme})=>theme.screen.tablet}){
+        display:block;
+    } */
+
+    @keyframes wave {
+        0%{transform:translate3d(0, 0, 0)}
+        30%{transform:translate3d(40px, 12px, 0)}
+        60%{transform:translate3d(60px, 22px, 0)}
+        70%{transform:translate3d(40px, 13px, 0)}
+        100%{transform:translate3d(0, 0, 0)}
+    }
+`

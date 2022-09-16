@@ -1,24 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import GlobalStyles from './components/styles/globalStyle';
+import NavBar from './components/header';
+import { ThemeProvider } from 'styled-components';
+import Hero from './components/hero';
+import Contact from './components/contact';
+import Business from './components/business';
+import Sponsors from './components/sponsors';
+import Footer from './components/footer';
+
+const theme = {
+  colors:{
+    primary:'#4583FF',
+    light_primary:'#F5F8FF',
+    text:'#555555',
+    secondary:'#83A735',
+    light_secondary:'#F3FEDC'
+  },
+  screen: {
+    mobileS: '320px',
+    mobileM: '375px',
+    mobileL: '425px',
+    tablet: '768px',
+    laptop: '1024px',
+    laptopM: '1280px',
+    laptopL: '1440px',
+    desktop: '2560px'
+  }
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles/>
+        <NavBar/>
+        <Hero/>
+        <Contact/>
+        <Business/>
+        <Sponsors/>
+        <Footer/>
+      </>
+    </ThemeProvider>
   );
 }
 
