@@ -10,6 +10,29 @@ export const HeroContainer = styled.div`
     padding-top:1rem;
     overflow:hidden;
 
+    padding-left:8px;
+    padding-right:8px;
+    @media(min-width:${({theme})=>theme.screen.tablet}) {
+        padding-left:16px;
+        padding-right:16px;
+    }
+    @media(min-width:${({theme})=>theme.screen.laptop}) {
+        padding-left:2rem;
+        padding-right:2rem;
+    }
+    @media(min-width:${({theme})=>theme.screen.laptopM}) {
+        padding-left:0px;
+        padding-right:0px;
+        width:90%;
+        margin:0px auto;
+    }
+    @media(min-width:${({theme})=>theme.screen.desktop}) {
+        padding-left:0px;
+        padding-right:0px;
+        width:80%;
+        margin:0px auto;
+    }
+
     @media(min-width:${({theme})=>theme.screen.tablet}){
         flex-direction:row;
     }

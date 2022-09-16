@@ -23,8 +23,6 @@ const GlobalStyles = createGlobalStyle`
     }
 
     .container {
-        box-sizing:border-box;
-        margin:0;
         padding-left:8px;
         padding-right:8px;
         @media(min-width:${({theme})=>theme.screen.tablet}) {
