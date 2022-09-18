@@ -3,7 +3,7 @@ import GlobalStyles from './components/styles/globalStyle';
 import NavBar from './components/header';
 import { ThemeProvider } from 'styled-components';
 import Hero from './components/hero';
-import Contact from './components/contact';
+import Contact from './components/contact2';
 import Business from './components/business';
 import Sponsors from './components/sponsors';
 import Footer from './components/footer';
@@ -36,6 +36,7 @@ function App() {
         <NavBar/>
         <Hero/>
         <Contact/>
+        {/* <Contact/> */}
         <Business/>
         <Sponsors/>
         <Footer/>

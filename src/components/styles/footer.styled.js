@@ -80,4 +80,5 @@ export const Aesthetic = styled.img.attrs((props)=>({
     height:100%;
     filter:grayscale(100%);
     display:block;
+    transform:scale(1.4);
 `

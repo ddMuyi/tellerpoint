@@ -7,6 +7,8 @@ export const SponsorContainer = styled.div`
     height:auto;
     z-index:1;
     position:relative;
+    padding-top:100px;
+    padding-bottom:100px;
 
     @media(min-width:${({theme})=>theme.screen.laptop}){
         padding:100px 0;

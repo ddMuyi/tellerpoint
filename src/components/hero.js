@@ -20,7 +20,7 @@ const Hero = () =>{
     }
     return (
         <>
-            <HeroContainer className="container">
+            <HeroContainer>
                 <HeroAesthetic src={aesthetic}/>
                 <LeftHeroContainer>
                     <LeftHeroMiniContainer>
@@ -36,10 +36,10 @@ const Hero = () =>{
                                 </div>
                                 <div className="third-line">
                                     <div className="animate-texts">
-                                        <h1>for Businesses <img src={business} alt="icon" style={{width:"30px"}}/></h1>
-                                        <h1>for Banks <img src={business} alt="icon" style={{width:"30px"}}/></h1>
-                                        <h1>for Businesses <img src={business} alt="icon" style={{width:"30px"}}/></h1>
-                                        <h1>for Banks <img src={business} alt="icon" style={{width:"30px"}}/></h1>
+                                        <h1>for Businesses <img src={business} alt="icon" className="icons"/></h1>
+                                        <h1>for Banks <img src={business} alt="icon" className="icons"/></h1>
+                                        <h1>for Businesses <img src={business} alt="icon" className="icons"/></h1>
+                                        <h1>for Banks <img src={business} alt="icon" className="icons"/></h1>
                                     </div>
                                 </div>
                             </div>

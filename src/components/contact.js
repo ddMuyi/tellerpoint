@@ -107,7 +107,7 @@ const Contact = () =>{
             // console.log("scrollY:" +  window.scrollY)
             if(innerWidth > 900) {
                 firstImage.style.height = `${left.offsetHeight}px`
-                if(window.scrollY > container.getBoundingClientRect().bottom  && scrollStatus === "up" ) {
+                if(window.scrollY > (miniCont.getBoundingClientRect().bottom + 100)  && scrollStatus === "up" ) {
                     miniCont.style.position = "fixed"
                     miniCont.style.top = "0px"
                     miniCont.style.transform = "scale(1)"
@@ -165,7 +165,7 @@ const Contact = () =>{
         <>
             <ContactContainer className='contactContainer'  id="contact">
                 <ContactMiniContainer className='mini-cont'>
-                <AestheticImage src={aesthetic}/>
+                {/* <AestheticImage src={aesthetic}/> */}
                 <LeftContainer className="left">
                     <ContactHeader>
                         <p className='intro'>tellerport for financial instituitions</p>

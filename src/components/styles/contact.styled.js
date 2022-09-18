@@ -18,7 +18,7 @@ export const ContactMiniContainer = styled.div`
     display: flex;
     /* background-color:${({theme})=>theme.colors.light_primary}; */
     border-radius:20px;
-    transition:0.5s ease;
+    /* transition:0.2s ease; */
     z-index:3;
     flex-direction:column;
     padding:16px;
@@ -26,7 +26,7 @@ export const ContactMiniContainer = styled.div`
     @media(min-width:${({theme})=>theme.screen.tablet}){
         flex-direction:row;
         background-color:#F5F8FF;
-        transform:scale(0.9);
+        /* transform:scale(0.9); */
     }
 
     @media(min-width:${({theme})=>theme.screen.laptop}){
@@ -34,7 +34,7 @@ export const ContactMiniContainer = styled.div`
     }
 
     @media(min-width:${({theme})=>theme.screen.laptopM}){
-        padding:3rem;
+        padding:5rem;
     }
 `
 
@@ -53,7 +53,7 @@ export const RightContainer = styled.div`
     position:relative;
     display: flex;
     justify-content: center;
-    margin-top:100px;
+    margin-top:42px;
 
     @media(min-width:${({theme})=>theme.screen.tablet}){
         width:50%;
@@ -80,8 +80,15 @@ export const RightInnerContainer = styled.div`
     position:relative;
     transition:1s ease;
 
+    /* & > .firstImage {
+        margin-top:42px;
+        @media(min-width:${({theme})=>theme.screen.tablet}){
+            margin-top:0px;
+        }
+    } */
+
     & > .firstIconRow {
-        margin-top:64px;
+        margin-top:42px;
         @media(min-width:${({theme})=>theme.screen.tablet}){
             margin-top:0px;
         }
@@ -89,10 +96,10 @@ export const RightInnerContainer = styled.div`
 
     & > .secondIconRow {
         transform:translateY(0px);
-        transition:1s ease-in-out;
+        transition:0.5s ease-in-out;
         margin-top:16px;
         @media(min-width:${({theme})=>theme.screen.tablet}){
-            transform:translateY(100vh);
+            transform:translateY(500px);
         }
         @media(min-width:${({theme})=>theme.screen.laptopM}){
             margin-top:24px;
@@ -100,10 +107,10 @@ export const RightInnerContainer = styled.div`
     }
     & > .thirdIconRow {
         transform:translateY(0px);
-        transition:1s ease-in-out;
+        transition:0.5s ease-in-out;
         margin-top:16px;
         @media(min-width:${({theme})=>theme.screen.tablet}){
-            transform:translateY(100vh);
+            transform:translateY(500px);
         }
         @media(min-width:${({theme})=>theme.screen.laptopM}){
             margin-top:24px;
@@ -119,13 +126,19 @@ export const ContactHeader = styled.header`
     & > .intro {
         padding:10px 16px;
         color:${({theme})=>theme.colors.primary};
-        background-color:white;
+        background-color:${({theme})=>theme.colors.light_primary};
         display:inline-flex;
+        align-items:center;
+        gap:0.8rem;
         border-radius:999px;
         text-transform:uppercase;
         font-size:12px;
         font-weight:500;
         margin-bottom:24px;
+
+        @media(min-width:${({theme})=>theme.screen.tablet}) {
+            background-color:white;
+        }
 
         @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:1rem;
@@ -176,7 +189,7 @@ export const GlowContainer = styled.div`
     align-items:center;
     justify-content: flex-start;
     gap:8px;
-    width:50%;
+    width:calc(50% - 12px);
 
     @media(min-width:${({theme})=>theme.screen.tablet}){
         width:auto;

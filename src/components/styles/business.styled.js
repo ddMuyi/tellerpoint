@@ -12,6 +12,11 @@ export const BusinessContainer = styled.div`
 
     @media(min-width:${({theme})=>theme.screen.tablet}){
         margin-top:200px;
+        height:auto;
+    }
+
+    @media(min-width:${({theme})=>theme.screen.laptop}){
+        margin-top:0px;
         height:100vh;
     }
 `
@@ -20,15 +25,16 @@ export const BusinessMiniContainer = styled.div`
     height:100%;
     display: flex;
     flex-direction:column;
-    /* background-color:white; */
+    background-color:white;
     border-radius:20px;
     padding:16px;
-    transition:0.5s ease;
+    /* transition:0.5s ease; */
     /* z-index:2; */
 
     @media(min-width:${({theme})=>theme.screen.tablet}){
+        background-color:${({theme})=>theme.colors.light_secondary};
         flex-direction:row;
-        transform:scale(0.9);
+        /* transform:scale(0.9); */
     }
 
     @media(min-width:${({theme})=>theme.screen.laptop}){
@@ -36,7 +42,7 @@ export const BusinessMiniContainer = styled.div`
     }
 
     @media(min-width:${({theme})=>theme.screen.laptopM}){
-        padding:3rem;
+        padding:5rem;
     }
 `
 
@@ -78,7 +84,7 @@ export const RightInnerContainer = styled.div`
     transition:1s ease;
 
     & > .bigman {
-        margin-top:100px;
+        margin-top:42px;
 
         @media(min-width:${({theme})=>theme.screen.tablet}){
             margin-top:0px;
@@ -87,7 +93,7 @@ export const RightInnerContainer = styled.div`
 
 
     & > .firstBigImageRow {
-        margin-top:64px;
+        margin-top:42px;
         @media(min-width:${({theme})=>theme.screen.tablet}){
             margin-top:0px;
         }
@@ -95,13 +101,14 @@ export const RightInnerContainer = styled.div`
 
     & > .secondBigImageRow {
         transform:translateY(0px);
-        transition:1s ease-in-out;
+        transition:0.5s ease-in-out;
         margin-top:16px;
         @media(min-width:${({theme})=>theme.screen.tablet}){
-            transform:translateY(100vh);
+            /* transform:translateY(500px); */
         }
         @media(min-width:${({theme})=>theme.screen.laptopM}){
             margin-top:24px;
+            /* transform:translateY(0px); */
         }
     }
 `
@@ -114,10 +121,16 @@ export const BusinessHeader = styled.header`
         color:${({theme})=>theme.colors.secondary};
         background-color:${({theme})=>theme.colors.light_secondary};
         display:inline-flex;
+        align-items: center;
+        gap:0.8rem;
         border-radius:999px;
         text-transform:uppercase;
         font-size:12px;
         font-weight:500;
+
+        @media(min-width:${({theme})=>theme.screen.tablet}) {
+            background-color:white;
+        }
 
         @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:1rem;
@@ -126,6 +139,7 @@ export const BusinessHeader = styled.header`
 
     & > h2 {
         font-size:2rem;
+        margin-top:1rem;
 
         @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:3rem;
@@ -165,6 +179,7 @@ export const BusinessButton = styled.button`
         font-size:24px;
         margin-top:42px;
         padding:0 32px;
+        height:64px;
     }
 `
 

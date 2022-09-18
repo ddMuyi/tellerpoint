@@ -10,12 +10,8 @@ export const HeroContainer = styled.div`
     padding-top:1rem;
     overflow:hidden;
 
-    padding-left:8px;
-    padding-right:8px;
-    @media(min-width:${({theme})=>theme.screen.tablet}) {
-        padding-left:16px;
-        padding-right:16px;
-    }
+    padding-left:16px;
+    padding-right:16px;
     @media(min-width:${({theme})=>theme.screen.laptop}) {
         padding-left:2rem;
         padding-right:2rem;
@@ -141,10 +137,14 @@ export const HeroHeader = styled.header`
     }
 
     & > .introduction {
-        font-size:1.2rem;
+        font-size:1rem;
         margin-top:24px;
         line-height:2rem;
         font-weight:500;
+
+        @media(min-width:${({theme})=>theme.screen.laptopM}){
+            font-size:1.2rem;
+        }
     }
 
     & > .main-header {
@@ -177,7 +177,7 @@ export const HeroHeader = styled.header`
             overflow:hidden;
 
             @media(min-width:${({theme})=>theme.screen.laptopM}){
-                height:3.5rem;
+                height:4.1rem;
             }
 
             & > .animate-texts{
@@ -185,10 +185,10 @@ export const HeroHeader = styled.header`
 
                 @keyframes scroll {
                     0%{transform:translateY(0)}
-                    1%{transform:translateY(-27%)}
-                    50%{transform:translateY(-27%)}
-                    51%{transform:translateY(-52%)}
-                    100%{transform:translateY(-52%)}
+                    1%{transform:translateY(-25%)}
+                    50%{transform:translateY(-25%)}
+                    51%{transform:translateY(-50%)}
+                    100%{transform:translateY(-50%)}
                     /* 0%{} */
                 }
 
@@ -198,6 +198,19 @@ export const HeroHeader = styled.header`
                     align-items:center;
                     justify-content:flex-start;
                     gap:16px;
+
+                    @media(min-width:${({theme})=>theme.screen.laptopM}){
+                        /* line-height:6rem; */
+                    }
+
+                    & > .icons {
+                        width: 38px;
+                        height:auto;
+
+                        @media(min-width:${({theme})=>theme.screen.laptopM}){
+                            width:auto;
+                        }
+                    }
                 }
             }
         }
