@@ -24,7 +24,7 @@ const Footer = () =>{
 
                     <LogoImg src={logo} alt="logo"/>
 
-                    <p>Tellerpoint is a product of Branchless Innovation <Br/>Limited, a company duly registered with the <Br/>Corporate Affairs Commission in Nigeria. <Br/>We are on a mission to enabling economic <Br/>prosperity for Africans through universal and<Br/>inclusive commerce.</p>
+                    <p>Tellerpoint is a product of Branchless Innovation Limited, a company duly registered <Br/>with the Corporate Affairs Commission in Nigeria. We are on a mission to enabling <Br/>economic prosperity for Africans through universal and inclusive commerce.</p>
                 </FooterInnerContainer>
             </FooterContainer>
         </>

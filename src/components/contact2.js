@@ -50,14 +50,14 @@ const TabUpwards = () =>{
 const Mobile = () =>{
     return <>
         <RightImageCont className='firstIconRow'>
-            <OtherRightImage src={img1}/>
-            <OtherRightImage src={img2}/>
-            <OtherRightImage src={img3}/>
-            <OtherRightImage src={img4}/>
-            <OtherRightImage src={img5}/>
-            <OtherRightImage src={img6}/>
-            <OtherRightImage src={img7}/>
-            <OtherRightImage src={img8}/>
+            <OtherRightImage src={img1} className="fade-in-items"/>
+            <OtherRightImage src={img2} className="fade-in-items"/>
+            <OtherRightImage src={img3} className="fade-in-items"/>
+            <OtherRightImage src={img4} className="fade-in-items"/>
+            <OtherRightImage src={img5} className="fade-in-items"/>
+            <OtherRightImage src={img6} className="fade-in-items"/>
+            <OtherRightImage src={img7} className="fade-in-items"/>
+            <OtherRightImage src={img8} className="fade-in-items"/>
         </RightImageCont>
     </>
 }
@@ -80,7 +80,7 @@ const Contact = () =>{
                     scrub:true,
                     pin:true,
                     start: "50% 50%",
-                    end: "+=200%"
+                    end: "250%"
                 }
             })
             .from('.mini-cont', {
@@ -103,6 +103,32 @@ const Contact = () =>{
                 duration:0.5,
                 y:0,
             }, "+180%")
+            .to('.thirdIconRow',{
+                duration:0.5,
+                y:0,
+            }, "+250%")
+        }
+
+        else {
+            let items = document.querySelectorAll('.fade-in-items')
+
+            items.forEach(item=>{
+                gsap.set(item, {y:100})
+                gsap.to(item, {
+                    duration: 1.2,
+                    autoAlpha:1,
+                    y: 0,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: item,
+                        start: "top bottom-=100",
+                        end: "bottom top+=100",
+                        toggleActions: "play reverse play reverse"
+                    }
+      
+                })
+            })
+            
         }
     }, [innerWidth])
 
@@ -124,8 +150,8 @@ const Contact = () =>{
                         <p className='description'>We provide financial institutions with the core <Br/>technology and tools to reach the mass market where <Br/>they live and work via agent banking services. </p>
 
                         <ParentGlowContainer>
-                            {['No upfront cost','Zero line of code ','Plug and play'].map(pros=>{
-                                return <GlowContainer>
+                            {['No upfront cost','Zero line of code ','Plug and play'].map((pros, index)=>{
+                                return <GlowContainer key={index}>
                                     <OutsideGlow>
                                         <InsideGlow/>
                                     </OutsideGlow>

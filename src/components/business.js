@@ -31,12 +31,12 @@ const Business = () =>{
     const Mobile = () =>{
         return <>
             <RightImageCont className='firstBigImageRow'>
-                <OtherRightImage src={img1}/>
-                <OtherRightImage src={img2}/>
-                <OtherRightImage src={img3}/>
-                <OtherRightImage src={img4}/>
-                <OtherRightImage src={img5}/>
-                <OtherRightImage src={img6}/>
+                <OtherRightImage src={img1}  className="fade-in-items"/>
+                <OtherRightImage src={img2}  className="fade-in-items"/>
+                <OtherRightImage src={img3}  className="fade-in-items"/>
+                <OtherRightImage src={img4}  className="fade-in-items"/>
+                <OtherRightImage src={img5}  className="fade-in-items"/>
+                <OtherRightImage src={img6}  className="fade-in-items"/>
             </RightImageCont>
         </>
     }
@@ -75,7 +75,7 @@ const Business = () =>{
                     scrub:true,
                     pin:true,
                     start: "50% 50%",
-                    end: "+=200%",
+                    end: "250%",
                 }
             })
             .from('.small-cont', {
@@ -94,6 +94,10 @@ const Business = () =>{
                 duration:0.5,
                 y:0,
             }, "+180%")
+            .to('#secondBigImageRow',{
+                duration:0.5,
+                y:0,
+            }, "+250%")
         }
 
     }, [innerWidth])

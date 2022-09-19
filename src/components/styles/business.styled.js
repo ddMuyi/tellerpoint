@@ -43,7 +43,7 @@ export const BusinessMiniContainer = styled.div`
 
     @media(min-width:${({theme})=>theme.screen.laptopM}){
         padding:5rem;
-        paddng-top:7rem;
+        padding-top:8rem;
     }
 `
 

@@ -16,6 +16,7 @@ export const FooterInnerContainer = styled.div`
     width:90%;
     height: auto;
     margin:0 auto;
+    position:relative;
     & > h3, p, a {
         color: #AAAAAA;
     }

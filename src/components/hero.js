@@ -18,12 +18,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 const Hero = () =>{
-    const animateArrow = (e) =>{
-        e.currentTarget.children[0].style.transform = "rotate(90deg)"
-    }
-    const returnArrow = (e) =>{
-        e.currentTarget.children[0].style.transform = "rotate(0deg)"
-    }
     return (
         <>
             <HeroContainer>
@@ -54,12 +48,13 @@ const Hero = () =>{
                             <p className="introduction intro-x">Tellerpoint helps financial institutions and businesses deliver <Br/>financial services to underserved communities easily and profitably.</p>
                         </HeroHeader>
 
-                        <HeroButton onMouseOver={animateArrow} onMouseOut={returnArrow} href="#instituition" className="-intro-y">
+                        <HeroButton href="#instituition" className="-intro-y">
                             Find out more 
                             <div style={{
                             display:"flex",
                             justifyContent:"center",
-                            alignItems:"center"
+                            alignItems:"center",
+                            transform:"rotate(90deg)"
                             }}>
                                 <img src={arrow} alt=""/>
                             </div>

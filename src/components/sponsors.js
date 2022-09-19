@@ -54,11 +54,11 @@ const Sponsors = () =>{
                     }}></div>
 
                     <SponsorsLogosCont>
-                        {innerWidth > 800 && images.map(image=>{
-                            return <SponsorsLogo src={image} small/>
+                        {innerWidth > 800 && images.map((image, index)=>{
+                            return <SponsorsLogo src={image} small key={index}/>
                         })}
-                        {innerWidth < 800 && smallImages.map(image=>{
-                            return <SponsorsLogo src={image} small/>
+                        {innerWidth < 800 && smallImages.map((image, index)=>{
+                            return <SponsorsLogo src={image} small key={index}/>
                         })}
                     </SponsorsLogosCont>
                 </SponsorMiniContainer>
