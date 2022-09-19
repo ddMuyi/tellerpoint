@@ -3,9 +3,9 @@ import { HeroContainer, LeftHeroContainer, RightHeroContainer, HeroHeader, HeroB
 import bankicon from '../assets/icons/pinkBank.svg'
 import bank from '../assets/icons/bank.svg'
 import africa from '../assets/icons/africa.svg'
-import heroImg1 from '../assets/images/hero1.jpg'
-import heroImg2 from '../assets/images/hero2.jpg'
-import heroImg3 from '../assets/images/hero3.jpg'
+import heroImg1 from '../assets/images/hero1.webp'
+import heroImg2 from '../assets/images/hero2.webp'
+import heroImg3 from '../assets/images/hero3.webp'
 import { HeroImage } from "./styles/hero.styled";
 import aesthetic from '../assets/images/heroAesthetic.svg'
 import arrow from '../assets/icons/arrow.svg'
