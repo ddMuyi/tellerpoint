@@ -95,10 +95,10 @@ export const Nav = styled.nav`
 
 export const ExtendedNav = styled.nav`
     width:100%;
-    height:calc(100vh - 100px);
+    height:calc(100vh - 50px);
     text-transform:uppercase;
     position:absolute;
-    top:100px;
+    top:50px;
     left:0px;
     display:flex;
     flex-direction:column;

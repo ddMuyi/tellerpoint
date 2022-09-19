@@ -7,7 +7,7 @@ export const HeroContainer = styled.div`
     flex-direction:column;
     position:relative;
     padding-bottom:4rem;
-    padding-top:1rem;
+    padding-top:5rem;
     overflow:hidden;
 
     padding-left:16px;
@@ -15,6 +15,7 @@ export const HeroContainer = styled.div`
     @media(min-width:${({theme})=>theme.screen.laptop}) {
         padding-left:2rem;
         padding-right:2rem;
+        padding-top:1rem;
     }
     @media(min-width:${({theme})=>theme.screen.laptopM}) {
         padding-left:0px;
@@ -263,7 +264,7 @@ export const HeroButton = styled.a.attrs((props)=>({
     color:white;
     border:none;
     border-radius:9999px;
-    padding:0px 12px;
+    padding:0px 24px;
     font-size:0.8rem;
     font-weight:500;
     margin-top:32px;

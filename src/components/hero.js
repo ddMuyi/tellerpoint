@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { HeroContainer, LeftHeroContainer, RightHeroContainer, HeroHeader, HeroButton, Br, LeftHeroMiniContainer, HeroAesthetic, RightHeroInnerContainer } from "./styles/hero.styled";
 import bankicon from '../assets/icons/pinkBank.svg'
 import bank from '../assets/icons/bank.svg'
@@ -24,28 +24,6 @@ const Hero = () =>{
     const returnArrow = (e) =>{
         e.currentTarget.children[0].style.transform = "rotate(0deg)"
     }
-
-    useEffect(()=>{
-        gsap.set('.imageContents', {scale:0})
-
-        gsap.to('.imageContents', {
-            duration:1,
-            scale:1,
-            autoAlpha:1,
-            ease:"bounce.out",
-            stagger:{
-                grid:"auto",
-                from:"random",
-                each: .2
-            },
-            scrollTrigger:{
-                trigger:".heroImageContainer",
-                start:"top bottom-=100",
-                end:"bottomtop+=100",
-                toggleActions:"play reset play reset"
-            }
-        })
-    })
     return (
         <>
             <HeroContainer>
@@ -91,9 +69,9 @@ const Hero = () =>{
                 </LeftHeroContainer>
                 <RightHeroContainer>
                     <RightHeroInnerContainer className="heroImageContainer">
-                        <HeroImage src={heroImg1} small className="imageContents"/>
-                        <HeroImage src={heroImg2} bigger className="imageContents"/>
-                        <HeroImage src={heroImg3} full className="imageContents"/>
+                        <HeroImage src={heroImg1} small className="imageContents intro-y"/>
+                        <HeroImage src={heroImg2} bigger className="imageContents -intro-y"/>
+                        <HeroImage src={heroImg3} full className="imageContents -intro-x"/>
                     </RightHeroInnerContainer>
                 </RightHeroContainer>
             </HeroContainer>

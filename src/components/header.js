@@ -24,7 +24,7 @@ const NavBar = () =>{
                 <Links href="#business">for business</Links>
             </Nav>
             <BurgerButton onClick={()=>setOpen(!open)}>
-                {open ? <>&#10005;</> : <>&#8801;</>}
+                {open ? <>&#215;</> : <>&#8801;</>}
             </BurgerButton>
 
             {open && <ExtendedNav>
