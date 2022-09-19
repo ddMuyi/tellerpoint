@@ -5,10 +5,11 @@ export const Container = styled.div`
     align-items:center;
     justify-content:space-between;
     width:100%;
-    padding:2rem;
     position:relative;
+    padding:1rem;
 
     @media(min-width:${({theme})=>theme.screen.tablet}) {
+        padding:2rem;
         padding-left:16px;
         padding-right:16px;
     }
@@ -30,7 +31,7 @@ export const Container = styled.div`
     }
 `
 
-export const BurgerButton = styled.p`
+export const BurgerButton = styled.div`
     width:45px;
     height:45px;
     color:#1C1B1F;
@@ -38,9 +39,10 @@ export const BurgerButton = styled.p`
     border:none;
     display:flex;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-end;
     font-size:40px;
     cursor:pointer;
+    margin-top:-10px;
 
     @media(min-width:${({theme})=>theme.screen.tablet}) {
         display:none;
@@ -64,9 +66,20 @@ export const Links = styled.a`
 export const Logo = styled.img.attrs(props=>({
     src:props.Img
 }))`
-    width:auto;
+    width:150px;
     height:auto;
     display:block;
+    animation:zoom 2s ease-in-out infinite;
+
+    @keyframes zoom {
+        0%{transform:scale(0.98)}   
+        50%{transform:scale(1)}   
+        100%{transform:scale(0.98)}   
+    }
+
+    @media(min-width:${({theme})=>theme.screen.tablet}) {
+        width:200px;
+    }
 `
 
 export const Nav = styled.nav`

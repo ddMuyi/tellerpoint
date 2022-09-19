@@ -70,4 +70,12 @@ export const SponsorsLogo = styled.img.attrs((props)=>({
     display:block;
     width:auto;
     height: auto;
+    filter:opacity(50%);
+`
+
+export const Br = styled.br`
+    display:none;
+    @media(min-width:${({theme})=>theme.screen.tablet}){
+        display:block;
+    }
 `

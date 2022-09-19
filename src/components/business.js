@@ -89,15 +89,11 @@ const Business = () =>{
             .to('.scrollingElement',{
                 duration:0.5,
                 y:-(left.offsetHeight)
-            }, "180%")
-            .from('#secondBigImageRow',{
-                duration:0.5,
-                y:'300px',
-            }, "+184%")
+            }, "+170%")
             .to('#secondBigImageRow',{
                 duration:0.5,
                 y:0,
-            }, "+188%")
+            }, "+180%")
         }
 
     }, [innerWidth])
@@ -105,13 +101,13 @@ const Business = () =>{
     
     
     return (
-        <div  className='businessContainer'>
+        <div  className='businessContainer' id="business">
             <BusinessContainer>
                 <BusinessMiniContainer className='small-cont'>
                 {/* <AestheticImage src={aesthetic}/> */}
                 <LeftContainer className="left-cont">
                     <BusinessHeader>
-                        <p className='intro'>tellerport for business  <img src={business} alt=""/></p>
+                        <p className='intro'>tellerpoint for business  <img src={business} alt=""/></p>
                         <h2>Cross sell and earn <Br/>extra income from <Br/>your customers</h2>
                         <p className='description'>Shop owners leverage the Tellerpoint platform to offer <Br/>over-the-counter bank teller services in their <Br/>communities for a fee and many other benefits. </p>
 

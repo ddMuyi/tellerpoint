@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { HeroContainer, LeftHeroContainer, RightHeroContainer, HeroHeader, HeroButton, Br, LeftHeroMiniContainer, HeroAesthetic, RightHeroInnerContainer } from "./styles/hero.styled";
 import bankicon from '../assets/icons/pinkBank.svg'
+import bank from '../assets/icons/bank.svg'
+import africa from '../assets/icons/africa.svg'
 import heroImg1 from '../assets/images/hero1.jpg'
 import heroImg2 from '../assets/images/hero2.jpg'
 import heroImg3 from '../assets/images/hero3.jpg'
@@ -8,6 +10,10 @@ import { HeroImage } from "./styles/hero.styled";
 import aesthetic from '../assets/images/heroAesthetic.svg'
 import arrow from '../assets/icons/arrow.svg'
 import business from '../assets/icons/business.svg'
+import ScrollTrigger from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger)
 
 
 
@@ -18,6 +24,28 @@ const Hero = () =>{
     const returnArrow = (e) =>{
         e.currentTarget.children[0].style.transform = "rotate(0deg)"
     }
+
+    useEffect(()=>{
+        gsap.set('.imageContents', {scale:0})
+
+        gsap.to('.imageContents', {
+            duration:1,
+            scale:1,
+            autoAlpha:1,
+            ease:"bounce.out",
+            stagger:{
+                grid:"auto",
+                from:"random",
+                each: .2
+            },
+            scrollTrigger:{
+                trigger:".heroImageContainer",
+                start:"top bottom-=100",
+                end:"bottomtop+=100",
+                toggleActions:"play reset play reset"
+            }
+        })
+    })
     return (
         <>
             <HeroContainer>
@@ -25,11 +53,11 @@ const Hero = () =>{
                 <LeftHeroContainer>
                     <LeftHeroMiniContainer>
                         <HeroHeader>
-                            <p className="welcome">
+                            <p className="welcome intro-y">
                                 Welcome to bank branch of the future &nbsp; &nbsp; <span className="wave">👋</span>
                             </p>
                             <div className="main-header">
-                                <h1>Community Banking</h1>
+                                <h1 className="">Community Banking</h1>
                                 <div className="second-line">
                                     <img className="second-line-img" src={bankicon} alt="bank icon"/>
                                     <h1>infrastructure</h1>
@@ -37,16 +65,18 @@ const Hero = () =>{
                                 <div className="third-line">
                                     <div className="animate-texts">
                                         <h1>for Businesses <img src={business} alt="icon" className="icons"/></h1>
-                                        <h1>for Banks <img src={business} alt="icon" className="icons"/></h1>
+                                        <h1>for Banks <img src={bank} alt="icon" className="icons"/></h1>
+                                        <h1>for Africa <img src={africa} alt="icon" className="icons"/></h1>
                                         <h1>for Businesses <img src={business} alt="icon" className="icons"/></h1>
-                                        <h1>for Banks <img src={business} alt="icon" className="icons"/></h1>
+                                        <h1>for Banks <img src={bank} alt="icon" className="icons"/></h1>
+                                        <h1>for Africa <img src={africa} alt="icon" className="icons"/></h1>
                                     </div>
                                 </div>
                             </div>
-                            <p className="introduction">Tellerpoint helps financial institutions and businesses deliver <Br/>financial services to underserved communities easily and profitably.</p>
+                            <p className="introduction intro-x">Tellerpoint helps financial institutions and businesses deliver <Br/>financial services to underserved communities easily and profitably.</p>
                         </HeroHeader>
 
-                        <HeroButton onMouseOver={animateArrow} onMouseOut={returnArrow} href="#contact">
+                        <HeroButton onMouseOver={animateArrow} onMouseOut={returnArrow} href="#instituition" className="-intro-y">
                             Find out more 
                             <div style={{
                             display:"flex",
@@ -60,10 +90,10 @@ const Hero = () =>{
                     </LeftHeroMiniContainer>
                 </LeftHeroContainer>
                 <RightHeroContainer>
-                    <RightHeroInnerContainer>
-                        <HeroImage src={heroImg1} small/>
-                        <HeroImage src={heroImg2} bigger/>
-                        <HeroImage src={heroImg3} full/>
+                    <RightHeroInnerContainer className="heroImageContainer">
+                        <HeroImage src={heroImg1} small className="imageContents"/>
+                        <HeroImage src={heroImg2} bigger className="imageContents"/>
+                        <HeroImage src={heroImg3} full className="imageContents"/>
                     </RightHeroInnerContainer>
                 </RightHeroContainer>
             </HeroContainer>

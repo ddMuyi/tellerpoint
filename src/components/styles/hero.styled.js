@@ -21,6 +21,7 @@ export const HeroContainer = styled.div`
         padding-right:0px;
         width:90%;
         margin:0px auto;
+        padding-top:3rem;
     }
     @media(min-width:${({theme})=>theme.screen.desktop}) {
         padding-left:0px;
@@ -83,7 +84,11 @@ export const RightHeroInnerContainer = styled.div`
     flex-wrap:wrap;
     gap:8px;
     position:relative;
-    margin-top:4rem;
+    margin-top:1rem;
+
+    @media(min-width:${({theme})=>theme.screen.mobileS}){
+        margin-top:4rem;
+    }
 
     @media(min-width:${({theme})=>theme.screen.tablet}) {
         width:90%;
@@ -106,6 +111,10 @@ export const HeroImage = styled.img.attrs(props=>({
     @media(min-width:${({theme})=>theme.screen.laptopM}) {
         width:${props => props.full ? '100%' : props.small ? 'calc(40% - 16px)' : props.bigger ? 'calc(60% - 16px)' : 'calc(50% - 16px)'};
     }
+
+    &:hover {
+        transform:scale(1.2);
+    }
 `
 
 export const HeroHeader = styled.header`
@@ -119,7 +128,13 @@ export const HeroHeader = styled.header`
         display:inline-flex;
         border-radius:999px;
         padding:9.5px 16px;
-        font-size:12px;
+        font-size:8px;
+        align-items:center;
+        justify-content:center;
+
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:12px;
+        }
 
         @media(min-width:${({theme})=>theme.screen.laptopM}){
             font-size:16px;
@@ -137,10 +152,15 @@ export const HeroHeader = styled.header`
     }
 
     & > .introduction {
-        font-size:1rem;
+        font-size:0.8rem;
         margin-top:24px;
         line-height:2rem;
         font-weight:500;
+
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:1rem;
+        }
+        
 
         @media(min-width:${({theme})=>theme.screen.laptopM}){
             font-size:1.2rem;
@@ -148,10 +168,14 @@ export const HeroHeader = styled.header`
     }
 
     & > .main-header {
-        font-size:1rem;
+        font-size:0.7rem;
         font-weight:600;
         display:inline-block;
         margin-top:24px;
+
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:1rem;
+        }
 
         @media(min-width:${({theme})=>theme.screen.laptopM}){
             font-size:1.7rem;
@@ -162,8 +186,12 @@ export const HeroHeader = styled.header`
             gap:16px;
 
             & > .second-line-img {
-                width: 38px;
+                width: 25px;
                 height:auto;
+
+                @media(min-width:${({theme})=>theme.screen.mobileS}){
+                    width: 38px
+                }
 
                 @media(min-width:${({theme})=>theme.screen.laptopM}){
                     width:auto;
@@ -172,24 +200,29 @@ export const HeroHeader = styled.header`
         }
 
         & > .third-line {
-            height:2rem;
+            height:1.7rem;
             color:${({theme})=>theme.colors.primary};
             overflow:hidden;
 
+            @media(min-width:${({theme})=>theme.screen.mobileS}){
+                height: 2.4rem;
+            }
+
             @media(min-width:${({theme})=>theme.screen.laptopM}){
-                height:4.1rem;
+                height:4.15rem;
             }
 
             & > .animate-texts{
-                animation:scroll 8s linear infinite;
+                animation:scroll 6s linear infinite;
 
                 @keyframes scroll {
                     0%{transform:translateY(0)}
-                    1%{transform:translateY(-25%)}
-                    50%{transform:translateY(-25%)}
-                    51%{transform:translateY(-50%)}
+                    1%{transform:translateY(-16.5%)}
+                    33%{transform:translateY(-16.5%)}
+                    34%{transform:translateY(-33.5%)}
+                    66%{transform:translateY(-33.5%)}
+                    67%{transform:translateY(-50%)}
                     100%{transform:translateY(-50%)}
-                    /* 0%{} */
                 }
 
                 & > h1 {
@@ -204,8 +237,12 @@ export const HeroHeader = styled.header`
                     }
 
                     & > .icons {
-                        width: 38px;
+                        width: 25px;
                         height:auto;
+
+                        @media(min-width:${({theme})=>theme.screen.mobileS}){
+                            width:38px;
+                        }
 
                         @media(min-width:${({theme})=>theme.screen.laptopM}){
                             width:auto;
@@ -221,13 +258,13 @@ export const HeroButton = styled.a.attrs((props)=>({
     href:props.href
 }))`
     width:auto;
-    height:48px;
+    height:40px;
     background-color:${({theme})=>theme.colors.primary};
     color:white;
     border:none;
     border-radius:9999px;
     padding:0px 12px;
-    font-size:1.1rem;
+    font-size:0.8rem;
     font-weight:500;
     margin-top:32px;
     display:inline-flex;
@@ -239,6 +276,10 @@ export const HeroButton = styled.a.attrs((props)=>({
         cursor:pointer;
     }
     
+    @media(min-width:${({theme})=>theme.screen.mobileS}){
+        height:48px;
+        font-size:1.1rem;
+    }
 
     @media(min-width:${({theme})=>theme.screen.tablet}){
         margin-top:56px;

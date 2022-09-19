@@ -35,6 +35,7 @@ export const ContactMiniContainer = styled.div`
 
     @media(min-width:${({theme})=>theme.screen.laptopM}){
         padding:5rem;
+        padding-top:7rem;
     }
 `
 
@@ -60,6 +61,10 @@ export const RightContainer = styled.div`
         justify-content: flex-end;
         margin-top:0px;
     }
+
+    /* @media(min-width:${({theme})=>theme.screen.laptop}){
+        padding-top:50px;
+    } */
 `
 
 export const RightMiniContainer = styled.div`
@@ -110,7 +115,7 @@ export const RightInnerContainer = styled.div`
         transition:0.5s ease-in-out;
         margin-top:16px;
         @media(min-width:${({theme})=>theme.screen.tablet}){
-            transform:translateY(500px);
+            transform:translateY(300px);
         }
         @media(min-width:${({theme})=>theme.screen.laptopM}){
             margin-top:24px;
@@ -132,9 +137,13 @@ export const ContactHeader = styled.header`
         gap:0.8rem;
         border-radius:999px;
         text-transform:uppercase;
-        font-size:12px;
+        font-size:8px;
         font-weight:500;
         margin-bottom:24px;
+
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:12px;
+        }
 
         @media(min-width:${({theme})=>theme.screen.tablet}) {
             background-color:white;
@@ -146,7 +155,11 @@ export const ContactHeader = styled.header`
     }
 
     & > h2 {
-        font-size:2rem;
+        font-size:1.4rem;
+
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:2rem;
+        }
 
         @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:3rem;
@@ -157,9 +170,13 @@ export const ContactHeader = styled.header`
         margin:24px 0;
         color:#555555;
         display:inline-flex;
-        font-size:1rem;
+        font-size:0.8rem;
         font-weight:500;
         line-height:2rem;
+
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:1rem;
+        }
 
         @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:1.2rem;
@@ -195,10 +212,14 @@ export const GlowContainer = styled.div`
         width:auto;
     }
 
-    & > .p{
-        font-size:14px;
+    & > p{
+        font-size:10px;
         font-weight:500;
-        color:#F5F8FF;
+        color:#555555;
+
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:14px;
+        }
 
         @media(min-width:${({theme})=>theme.screen.laptopM}){
             font-size:16px;
@@ -215,9 +236,9 @@ export const ParentGlowContainer = styled.div`
 
 export const ContactButton = styled.button`
     width: auto;
-    height:48px;
+    height:40px;
     font-weight:500;
-    font-size:18px;
+    font-size:0.8rem;
     background-color:${({theme})=>theme.colors.primary};
     color:white;
     margin-top:32px;
@@ -227,6 +248,11 @@ export const ContactButton = styled.button`
     display:flex;
     align-items:center;
     gap:16px;
+
+    @media(min-width:${({theme})=>theme.screen.mobileS}){
+        font-size:18px;
+        height:48px;
+    }
 
     @media(min-width:${({theme})=>theme.screen.laptopM}){
         font-size:24px;
@@ -275,7 +301,7 @@ export const OtherRightImage = styled.img.attrs((props)=>({
 
 export const Br = styled.br`
     display:none;
-    @media(min-width:${({theme})=>theme.screen.tablet}){
+    @media(min-width:${({theme})=>theme.screen.laptop}){
         display:block;
     }
 `

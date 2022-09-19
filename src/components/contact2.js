@@ -94,15 +94,15 @@ const Contact = () =>{
             .to('.scrollElement',{
                 duration:0.5,
                 y:-left.offsetHeight
-            }, "+180%")
+            }, "+170%")
             .to('.secondIconRow',{
                 duration:0.5,
                 y:0,
-            }, "+185%")
+            }, "+175%")
             .to('.thirdIconRow',{
                 duration:0.5,
                 y:0,
-            }, "+190%")
+            }, "+180%")
         }
     }, [innerWidth])
 
@@ -112,12 +112,12 @@ const Contact = () =>{
     }, [innerWidth])
     
     return (
-        <div className='contactContainer' id="contact">
+        <div className='contactContainer' id="instituition">
             <ContactContainer>
                 <ContactMiniContainer className='mini-cont'>
                 <LeftContainer className="left">
                     <ContactHeader>
-                        <p className='intro'>tellerport for financial instituitions <img src={finance} alt=""/></p>
+                        <p className='intro'>tellerpoint for financial instituitions <img src={finance} alt=""/></p>
                         <h2>Launch your agent</h2>
                         <h2>banking network in a</h2>
                         <h2>matter of days</h2>

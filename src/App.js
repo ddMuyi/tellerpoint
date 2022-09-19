@@ -17,6 +17,7 @@ const theme = {
     light_secondary:'#F3FEDC'
   },
   screen: {
+    mobileXS:'250px',
     mobileS: '320px',
     mobileM: '375px',
     mobileL: '425px',

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { SponsorContainer, SponsorMiniContainer, SponsorHeader, SponsorsLogosCont, SponsorsLogo } from './styles/sponsors.styled'
+import { SponsorContainer, SponsorMiniContainer, SponsorHeader, SponsorsLogosCont, SponsorsLogo, Br } from './styles/sponsors.styled'
 
 // For large screen
 import coral from '../assets/logos/coralpay.svg'
@@ -43,7 +43,7 @@ const Sponsors = () =>{
                 <SponsorMiniContainer>
                     <SponsorHeader>
                         <h3>Supported by banking and payments industry leaders</h3>
-                        <p>Tellerpoint services are delivered in partnership with strong local financial institutions and payments companies in Nigeria</p>
+                        <p>Tellerpoint services are delivered in partnership with strong local financial <Br/>institutions and payments companies in Nigeria</p>
                     </SponsorHeader>
 
                     <div style={{

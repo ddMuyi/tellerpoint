@@ -23,9 +23,13 @@ export const FooterInnerContainer = styled.div`
     & > a {
         text-decoration:none;
         font-weight:500;
-        font-size:32px;
+        font-size:25px;
         margin-top:38px;
         display:block;
+
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:32px;
+        }
     }
 
     & > h3 {
@@ -34,9 +38,13 @@ export const FooterInnerContainer = styled.div`
 
     & > p {
         line-height:36px;
-        font-size:18px;
+        font-size:16px;
         margin-top:24px;
         font-weight:500;
+
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:18px;
+        }
     }
 `
 

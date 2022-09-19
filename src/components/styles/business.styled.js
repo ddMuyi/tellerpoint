@@ -43,6 +43,7 @@ export const BusinessMiniContainer = styled.div`
 
     @media(min-width:${({theme})=>theme.screen.laptopM}){
         padding:5rem;
+        paddng-top:7rem;
     }
 `
 
@@ -106,9 +107,9 @@ export const RightInnerContainer = styled.div`
         @media(min-width:${({theme})=>theme.screen.tablet}){
             /* transform:translateY(500px); */
         }
-        @media(min-width:${({theme})=>theme.screen.laptopM}){
+        @media(min-width:${({theme})=>theme.screen.laptop}){
             margin-top:24px;
-            /* transform:translateY(0px); */
+            transform:translateY(300px);
         }
     }
 `
@@ -125,8 +126,12 @@ export const BusinessHeader = styled.header`
         gap:0.8rem;
         border-radius:999px;
         text-transform:uppercase;
-        font-size:12px;
+        font-size:8px;
         font-weight:500;
+
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:12px;
+        }
 
         @media(min-width:${({theme})=>theme.screen.tablet}) {
             background-color:white;
@@ -138,8 +143,12 @@ export const BusinessHeader = styled.header`
     }
 
     & > h2 {
-        font-size:2rem;
+        font-size:1.4rem;
         margin-top:1rem;
+
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:2rem;
+        }
 
         @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:3rem;
@@ -150,9 +159,13 @@ export const BusinessHeader = styled.header`
         margin:24px 0;
         color:#555555;
         display:inline-flex;
-        font-size:1rem;
+        font-size:0.8rem;
         font-weight:500;
         line-height:2rem;
+
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:1rem;
+        }
 
         @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:1.2rem;
@@ -162,9 +175,9 @@ export const BusinessHeader = styled.header`
 
 export const BusinessButton = styled.button`
     width: auto;
-    height:48px;
+    height:40px;
     font-weight:500;
-    font-size:18px;
+    font-size:0.8rem;
     background-color:${({theme})=>theme.colors.secondary};
     color:white;
     margin-top:32px;
@@ -174,6 +187,11 @@ export const BusinessButton = styled.button`
     display:flex;
     align-items:center;
     gap:16px;
+
+    @media(min-width:${({theme})=>theme.screen.mobileS}){
+        font-size:18px;
+        height:48px;
+    }
 
     @media(min-width:${({theme})=>theme.screen.laptopM}){
         font-size:24px;
@@ -221,7 +239,7 @@ export const OtherRightImage = styled.img.attrs((props)=>({
 
 export const Br = styled.br`
     display:none;
-    @media(min-width:${({theme})=>theme.screen.tablet}){
+    @media(min-width:${({theme})=>theme.screen.laptop}){
         display:block;
     }
 `
