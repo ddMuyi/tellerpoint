@@ -115,7 +115,7 @@ const Contact = () =>{
             items.forEach(item=>{
                 gsap.set(item, {y:100})
                 gsap.to(item, {
-                    duration: 1.2,
+                    duration: 0.5,
                     autoAlpha:1,
                     y: 0,
                     ease: "power2.out",
