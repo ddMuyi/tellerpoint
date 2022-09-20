@@ -28,8 +28,8 @@ const NavBar = () =>{
             </BurgerButton>
 
             {open && <ExtendedNav>
-                <Links href="#instituition">for instituition</Links>
-                <Links href="#business">for business</Links>
+                <Links  onClick={()=>setOpen(false)} href="#instituition">for instituition</Links>
+                <Links  onClick={()=>setOpen(false)} href="#business">for business</Links>
             </ExtendedNav>}
         </Container>
     )

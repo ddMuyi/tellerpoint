@@ -83,7 +83,7 @@ export const RightHeroInnerContainer = styled.div`
     width:100%;
     display:flex;
     flex-wrap:wrap;
-    gap:8px;
+    gap:24px;
     position:relative;
     margin-top:1rem;
 
@@ -106,11 +106,15 @@ export const RightHeroInnerContainer = styled.div`
 export const HeroImage = styled.img.attrs(props=>({
     src:props.src
 }))`
-    width:${props => props.full ? '100%' : props.small ? 'calc(40% - 4px)' : props.bigger ? 'calc(60% - 4px)' : 'calc(50% - 4px)'};
+    width:${props => props.full ? '100%' : props.small ? 'calc(50% - 12px)' : props.bigger ? 'calc(50% - 12px)' : 'calc(50% - 12px)'};
     height:auto;
 
+    @media(min-width:${({theme})=>theme.screen.tablet}) {
+        width:${props => props.full ? '100%' : props.small ? 'calc(45% - 16px)' : props.bigger ? 'calc(55% - 16px)' : 'calc(50% - 16px)'};
+    }
+
     @media(min-width:${({theme})=>theme.screen.laptopM}) {
-        width:${props => props.full ? '100%' : props.small ? 'calc(40% - 16px)' : props.bigger ? 'calc(60% - 16px)' : 'calc(50% - 16px)'};
+        width:${props => props.full ? '100%' : props.small ? 'calc(45% - 16px)' : props.bigger ? 'calc(55% - 16px)' : 'calc(50% - 16px)'};
     }
 
     &:hover {
