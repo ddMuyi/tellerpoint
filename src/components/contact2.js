@@ -113,11 +113,12 @@ const Contact = () =>{
             let items = document.querySelectorAll('.fade-in-items')
 
             items.forEach(item=>{
-                gsap.set(item, {y:100})
+                gsap.set(item, {y:100, opacity:0})
                 gsap.to(item, {
-                    duration: 0.5,
+                    duration: 0.2,
                     autoAlpha:1,
                     y: 0,
+                    opacity:1,
                     ease: "power2.out",
                     scrollTrigger: {
                         trigger: item,
