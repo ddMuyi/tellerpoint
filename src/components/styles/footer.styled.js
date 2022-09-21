@@ -60,7 +60,7 @@ export const LogoImg = styled.img.attrs((props)=>({
 
 export const Br = styled.br`
     display:none;
-    @media(min-width:${({theme})=>theme.screen.tablet}){
+    @media(min-width:${({theme})=>theme.screen.laptop}){
         display:block;
     }
 `

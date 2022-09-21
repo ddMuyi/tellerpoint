@@ -147,6 +147,8 @@ export const HeroHeader = styled.header`
 
         & > .wave {
             animation:wavehand 2s ease infinite;
+            -webkit-animation:wavehand 2s ease infinite;
+            -moz-animation:wavehand 2s ease infinite;
         }
 
         @keyframes wavehand {

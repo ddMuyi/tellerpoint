@@ -32,13 +32,13 @@ export const BusinessMiniContainer = styled.div`
     /* z-index:2; */
 
     @media(min-width:${({theme})=>theme.screen.tablet}){
-        background-color:${({theme})=>theme.colors.light_secondary};
         flex-direction:row;
         /* transform:scale(0.9); */
     }
 
     @media(min-width:${({theme})=>theme.screen.laptop}){
         padding:2rem;
+        background-color:${({theme})=>theme.colors.light_secondary};
     }
 
     @media(min-width:${({theme})=>theme.screen.laptopM}){

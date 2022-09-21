@@ -14,7 +14,7 @@ export const ContactContainer = styled.div`
 
 export const ContactMiniContainer = styled.div`
     width:100%;
-    height:100%;
+    height:auto;
     display: flex;
     /* background-color:${({theme})=>theme.colors.light_primary}; */
     border-radius:20px;
@@ -25,12 +25,13 @@ export const ContactMiniContainer = styled.div`
 
     @media(min-width:${({theme})=>theme.screen.tablet}){
         flex-direction:row;
-        background-color:#F5F8FF;
         /* transform:scale(0.9); */
     }
 
     @media(min-width:${({theme})=>theme.screen.laptop}){
         padding:2rem;
+        background-color:#F5F8FF;
+        height:100%;
     }
 
     @media(min-width:${({theme})=>theme.screen.laptopM}){
