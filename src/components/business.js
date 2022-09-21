@@ -125,7 +125,7 @@ const Business = () =>{
                 <RightContainer className='right'>
                     <RightMiniContainer className="imageAnimationContainer">
                         <RightInnerContainer className="scrollingElement">
-                            <RightImageCont className="bigman">
+                            <RightImageCont noMargin className="bigman">
                                 <RightImage src={innerWidth < 900 ? smallman : bigman} className="man"/>
                             </RightImageCont>
                             {innerWidth < 900 ? <Mobile/> : <TabUpwards/>}

@@ -83,7 +83,6 @@ export const RightInnerContainer = styled.div`
     width:100%;
     height:auto;
     overflow-y:hidden;
-    overflow-x:hidden;
     position:relative;
     transition:1s ease;
 
@@ -280,11 +279,9 @@ export const RightImageCont = styled.div`
     flex-wrap:wrap;
     align-items:flex-start;
     gap:16px;
-    margin-left:16px;
 
     @media(min-width:${({theme})=>theme.screen.laptop}){
         gap:24px;
-        margin-right:0px;
     }
     /* background-color:yellow; */
 `
@@ -302,12 +299,12 @@ export const RightImage = styled.img.attrs((props)=>({
 export const OtherRightImage = styled.img.attrs((props)=>({
     src:props.src
 }))`
-    max-width:calc(50% - 8px);
+    width:calc(50% - 8px);
     height:auto;
     display:block;
 
     @media(min-width:${({theme})=>theme.screen.laptop}){
-        max-width:calc(33.33% - 16px);
+        width:calc(33.33% - 16px);
     }
 `
 

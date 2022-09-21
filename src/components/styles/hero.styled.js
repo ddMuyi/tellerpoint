@@ -221,6 +221,9 @@ export const HeroHeader = styled.header`
 
             & > .animate-texts{
                 animation:scroll 6s linear infinite;
+                -moz-animation:scroll 6s linear infinite;
+                -o-animation:scroll 6s linear infinite;
+                -webkit-animation:scroll 6s linear infinite;
 
                 @keyframes scroll {
                     0%{transform:translateY(0)}

@@ -170,7 +170,7 @@ const Contact = () =>{
                 <RightContainer className='right'>
                     <RightMiniContainer className="imageAnimationContainer">
                         <RightInnerContainer className="scrollElement">
-                            <RightImageCont className='firstImage'>
+                            <RightImageCont noMargin className='firstImage'>
                                 <RightImage className="" src={innerWidth < 900 ? smallpos : bigpos}/>
                             </RightImageCont>
 
