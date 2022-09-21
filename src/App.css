@@ -45,6 +45,16 @@
   animation-delay: calc(10 * 0.1s);
 }
 
+.bounce {
+  animation:bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%{transform: translateX(-2px);}
+  50%{transform: translateX(2px);}
+  100%{transform: translateX(-2px);}
+}
+
 @-webkit-keyframes intro-x-animation {
   100% {
     opacity: 1;

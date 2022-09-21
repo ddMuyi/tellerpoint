@@ -83,6 +83,7 @@ export const RightInnerContainer = styled.div`
     width:100%;
     height:auto;
     overflow-y:hidden;
+    overflow-x:hidden;
     position:relative;
     transition:1s ease;
 
@@ -261,6 +262,14 @@ export const ContactButton = styled.button`
         padding:0 32px;
         height:64px;
     }
+
+    & > img {
+        width:18px;
+
+        @media(min-width:${({theme})=>theme.screen.laptopM}){
+            width:auto;
+        } 
+    }
 `
 
 export const RightImageCont = styled.div`
@@ -271,9 +280,11 @@ export const RightImageCont = styled.div`
     flex-wrap:wrap;
     align-items:flex-start;
     gap:16px;
+    margin-left:16px;
 
     @media(min-width:${({theme})=>theme.screen.laptop}){
         gap:24px;
+        margin-right:0px;
     }
     /* background-color:yellow; */
 `

@@ -117,7 +117,7 @@ const Business = () =>{
 
                         <BusinessButton className=''>
                             Become an agent
-                            <img src={envelop} alt=""/>
+                            <img className='bounce' src={envelop} alt=""/>
                         </BusinessButton>
                     </BusinessHeader>
                 </LeftContainer>

@@ -297,6 +297,14 @@ export const HeroButton = styled.a.attrs((props)=>({
 
     & > div {
         transition:0.5s ease;
+
+        & > img {
+            width:16px;
+
+            @media(min-width:${({theme})=>theme.screen.laptopM}){
+                width:auto;
+            } 
+        }
     }
 `
 
