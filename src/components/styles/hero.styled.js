@@ -240,35 +240,14 @@ export const HeroHeader = styled.header`
 
             & > .animate-texts{
                 animation:scroll 6s linear infinite;
-                -moz-animation:scroll 6s linear infinite;
+                animation-delay: 2s;
+                /* -moz-animation:scroll 6s linear infinite;
                 -o-animation:scroll 6s linear infinite;
                 -webkit-animation:scroll 6s linear infinite;
-                -ms-animation:scroll 6s linear infinite;
+                -ms-animation:scroll 6s linear infinite; */
 
                 @keyframes scroll {
                     ${createCSS()}
-                }
-
-                @-webkit-keyframes scroll {
-                    -10%, 0% {
-                        transform: translateY(0%);
-                        -webkit-transform: translateY(0%);
-                    };
-                
-                    23.333%, 33.333% {
-                        transform: translateY(-25%);
-                        -webkit-transform: translateY(-25%);
-                    };
-                
-                    56.666%, 66.666% {
-                        transform: translateY(-50%);
-                        -webkit-transform: translateY(-50%);
-                    };
-                
-                    89.999%, 99.999% {
-                        transform: translateY(-75%);
-                        -webkit-transform: translateY(-75%);
-                    };
                 }
 
                 & > .scrollText {
