@@ -1,4 +1,19 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
+
+function createCSS() {
+    let styles = '';
+  
+    for (let i = 0; i < 4; i++) {
+       styles += `
+        ${(i * 33.333) - 10}%, ${i * 33.333}% {
+            transform: translateY(${(-100 / 4) * i}%);
+        };
+       `
+    }
+    console.log(styles)
+  
+    return css`${styles}`;
+  }
 
 export const HeroContainer = styled.div`
     width:100%;
@@ -225,18 +240,14 @@ export const HeroHeader = styled.header`
                 -o-animation:scroll 6s linear infinite;
                 -webkit-animation:scroll 6s linear infinite;
 
+                $item-count: 6;
+
                 @keyframes scroll {
-                    0%{transform:translateY(0)}
+                    ${createCSS()}
+                    /* 0%{transform:translateY(0)}
                     1%{transform:translateY(-16.66%)}
                     33%{transform:translateY(-16.66%)}
                     34%{transform:translateY(-33.32%)}
-                    66%{transform:translateY(-33.32%)}
-                    67%{transform:translateY(-49.98%)}
-                    100%{transform:translateY(-49.98%)}
-                    /* 0%{transform:translateY(0)}
-                    32%{transform:translateY(0%)}
-                    33%{transform:translateY(-16.66%)}
-                    65%{transform:translateY(-16.66%)}
                     66%{transform:translateY(-33.32%)}
                     67%{transform:translateY(-49.98%)}
                     100%{transform:translateY(-49.98%)} */

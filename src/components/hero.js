@@ -48,8 +48,8 @@ const Hero = () =>{
                                         <h1>for Banks <img src={bank} alt="icon" className="icons"/></h1>
                                         <h1>for Africa <img src={africa} alt="icon" className="icons"/></h1>
                                         <h1>for Businesses <img src={business} alt="icon" className="icons"/></h1>
-                                        <h1>for Banks <img src={bank} alt="icon" className="icons"/></h1>
-                                        <h1>for Africa <img src={africa} alt="icon" className="icons"/></h1>
+                                        {/* <h1>for Banks <img src={bank} alt="icon" className="icons"/></h1>
+                                        <h1>for Africa <img src={africa} alt="icon" className="icons"/></h1> */}
                                     </div>
                                 </div>
                             </div>
