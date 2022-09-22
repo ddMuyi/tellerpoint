@@ -227,12 +227,19 @@ export const HeroHeader = styled.header`
 
                 @keyframes scroll {
                     0%{transform:translateY(0)}
-                    1%{transform:translateY(-16.5%)}
-                    33%{transform:translateY(-16.5%)}
-                    34%{transform:translateY(-33.5%)}
-                    66%{transform:translateY(-33.5%)}
-                    67%{transform:translateY(-50%)}
-                    100%{transform:translateY(-50%)}
+                    1%{transform:translateY(-16.66%)}
+                    33%{transform:translateY(-16.66%)}
+                    34%{transform:translateY(-33.32%)}
+                    66%{transform:translateY(-33.32%)}
+                    67%{transform:translateY(-49.98%)}
+                    100%{transform:translateY(-49.98%)}
+                    /* 0%{transform:translateY(0)}
+                    32%{transform:translateY(0%)}
+                    33%{transform:translateY(-16.66%)}
+                    65%{transform:translateY(-16.66%)}
+                    66%{transform:translateY(-33.32%)}
+                    67%{transform:translateY(-49.98%)}
+                    100%{transform:translateY(-49.98%)} */
                 }
 
                 & > h1 {
