@@ -249,6 +249,10 @@ export const HeroHeader = styled.header`
                     ${createCSS()}
                 }
 
+                @-webkit-keyframes scroll {
+                    ${createCSS()}
+                }
+
                 & > .scrollText {
                     display:flex;
                     align-items:center;
