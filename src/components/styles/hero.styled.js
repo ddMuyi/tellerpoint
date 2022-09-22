@@ -270,7 +270,7 @@ export const HeroHeader = styled.header`
                         height:auto;
 
                         @media(min-width:${({theme})=>theme.screen.mobileS}){
-                            width:34px;
+                            width:32px;
                         }
 
                         @media(min-width:${({theme})=>theme.screen.laptopM}){
