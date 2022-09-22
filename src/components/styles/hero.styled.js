@@ -259,6 +259,7 @@ export const HeroHeader = styled.header`
                     align-items:center;
                     justify-content:flex-start;
                     gap:16px;
+                    /* padding:2px 0; */
 
                     @media(min-width:${({theme})=>theme.screen.laptopM}){
                         /* line-height:6rem; */
@@ -269,7 +270,7 @@ export const HeroHeader = styled.header`
                         height:auto;
 
                         @media(min-width:${({theme})=>theme.screen.mobileS}){
-                            width:38px;
+                            width:34px;
                         }
 
                         @media(min-width:${({theme})=>theme.screen.laptopM}){
