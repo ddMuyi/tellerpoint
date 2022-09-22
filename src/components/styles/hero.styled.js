@@ -247,30 +247,27 @@ export const HeroHeader = styled.header`
 
                 @keyframes scroll {
                     ${createCSS()}
-                    /* 0%{transform:translateY(0)}
-                    1%{transform:translateY(-16.66%)}
-                    33%{transform:translateY(-16.66%)}
-                    34%{transform:translateY(-33.32%)}
-                    66%{transform:translateY(-33.32%)}
-                    67%{transform:translateY(-49.98%)}
-                    100%{transform:translateY(-49.98%)} */
                 }
 
-                & > h1 {
-                    color:${({theme})=>theme.colors.primary};
+                & > .scrollText {
                     display:flex;
                     align-items:center;
                     justify-content:flex-start;
                     gap:16px;
-                    /* padding:2px 0; */
+                    padding:0px;
 
-                    @media(min-width:${({theme})=>theme.screen.laptopM}){
-                        /* line-height:6rem; */
+                    & > h1 {
+                        color:${({theme})=>theme.colors.primary};
+
+                        @media(min-width:${({theme})=>theme.screen.laptopM}){
+                            /* line-height:6rem; */
+                        }
                     }
 
                     & > .icons {
                         width: 25px;
                         height:auto;
+                        padding:0px;
 
                         @media(min-width:${({theme})=>theme.screen.mobileS}){
                             width:38px;

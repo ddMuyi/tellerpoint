@@ -17,7 +17,24 @@ import gsap from "gsap";
 
 gsap.registerPlugin(ScrollTrigger)
 
-
+const headerTexts = [
+    {
+        header:"for Businesses",
+        icon:business
+    },
+    {
+        header:"for Banks",
+        icon:bank
+    },
+    {
+        header:"for Africa",
+        icon:africa
+    },
+    {
+        header:"for Businesses",
+        icon:business
+    }
+]
 
 const Hero = () =>{
     const [innerWidth, setInnerWidth] = useState(null)
@@ -44,12 +61,14 @@ const Hero = () =>{
                                 </div>
                                 <div className="third-line">
                                     <div className="animate-texts">
-                                        <h1>for Businesses <img src={business} alt="icon" className="icons"/></h1>
-                                        <h1>for Banks <img src={bank} alt="icon" className="icons"/></h1>
-                                        <h1>for Africa <img src={africa} alt="icon" className="icons"/></h1>
-                                        <h1>for Businesses <img src={business} alt="icon" className="icons"/></h1>
+                                        {headerTexts.map(({header, icon})=>{
+                                        return <div className="scrollText">
+                                            <h1>{header}</h1>
+                                            <img src={icon} alt="icon" className="icons"/>
+                                        </div>})}
                                         {/* <h1>for Banks <img src={bank} alt="icon" className="icons"/></h1>
-                                        <h1>for Africa <img src={africa} alt="icon" className="icons"/></h1> */}
+                                        <h1>for Africa <img src={africa} alt="icon" className="icons"/></h1>
+                                        <h1>for Businesses <img src={business} alt="icon" className="icons"/></h1> */}
                                     </div>
                                 </div>
                             </div>
