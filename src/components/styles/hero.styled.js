@@ -7,6 +7,10 @@ function createCSS() {
        styles += `
         ${(i * 33.333) - 10}%, ${i * 33.333}% {
             transform: translateY(${(-100 / 4) * i}%);
+            -webkit-transform: translateY(${(-100 / 4) * i}%);
+            -ms-transform: translateY(${(-100 / 4) * i}%);
+            -o-transform: translateY(${(-100 / 4) * i}%);
+            -moz-transform: translateY(${(-100 / 4) * i}%);
         };
        `
     }
@@ -239,8 +243,7 @@ export const HeroHeader = styled.header`
                 -moz-animation:scroll 6s linear infinite;
                 -o-animation:scroll 6s linear infinite;
                 -webkit-animation:scroll 6s linear infinite;
-
-                $item-count: 6;
+                -ms-animation:scroll 6s linear infinite;
 
                 @keyframes scroll {
                     ${createCSS()}
