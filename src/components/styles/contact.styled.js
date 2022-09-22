@@ -8,6 +8,9 @@ export const ContactContainer = styled.div`
     z-index:3;
 
     @media(min-width:${({theme})=>theme.screen.tablet}){
+        height:auto;
+    }
+    @media(min-width:${({theme})=>theme.screen.laptop}){
         height:100vh;
     }
 `
@@ -16,9 +19,7 @@ export const ContactMiniContainer = styled.div`
     width:100%;
     height:auto;
     display: flex;
-    /* background-color:${({theme})=>theme.colors.light_primary}; */
     border-radius:20px;
-    /* transition:0.2s ease; */
     z-index:3;
     flex-direction:column;
     padding:16px;
@@ -37,6 +38,9 @@ export const ContactMiniContainer = styled.div`
     @media(min-width:${({theme})=>theme.screen.laptopM}){
         padding:5rem;
         padding-top:8rem;
+    }
+    @media(min-width:${({theme})=>theme.screen.desktop}){
+        padding:10rem
     }
 `
 
@@ -153,6 +157,9 @@ export const ContactHeader = styled.header`
         @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:1rem;
         }
+        @media(min-width:${({theme})=>theme.screen.desktop}){
+            font-size:1.2rem
+        }
     }
 
     & > h2 {
@@ -164,6 +171,9 @@ export const ContactHeader = styled.header`
 
         @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:3rem;
+        }
+        @media(min-width:${({theme})=>theme.screen.desktop}){
+            font-size:5rem
         }
     }
 
@@ -181,6 +191,9 @@ export const ContactHeader = styled.header`
 
         @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:1.2rem;
+        }
+        @media(min-width:${({theme})=>theme.screen.desktop}){
+            font-size:1.5rem;
         }
     }
 `

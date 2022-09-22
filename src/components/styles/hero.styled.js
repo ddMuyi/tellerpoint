@@ -177,7 +177,7 @@ export const HeroHeader = styled.header`
     & > .main-header {
         font-size:0.7rem;
         font-weight:600;
-        display:inline-block;
+        display:block;
         margin-top:24px;
 
         @media(min-width:${({theme})=>theme.screen.mobileS}){

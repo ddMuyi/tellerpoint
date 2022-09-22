@@ -80,7 +80,7 @@ const Contact = () =>{
                     scrub:true,
                     pin:true,
                     start: "50% 50%",
-                    end: "250%"
+                    end: "+=250%"
                 }
             })
             .from('.mini-cont', {
@@ -103,6 +103,10 @@ const Contact = () =>{
                 duration:0.5,
                 y:0,
             }, "+180%")
+            .to('.thirdIconRow',{
+                duration:0.5,
+                y:0,
+            }, "+200%")
             .to('.thirdIconRow',{
                 duration:0.5,
                 y:0,

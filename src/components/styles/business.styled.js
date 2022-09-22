@@ -8,7 +8,7 @@ export const BusinessContainer = styled.div`
     z-index:2;
     position:relative;
     background-color:white;
-    margin-top:100px;
+    margin-top:50px;
 
     @media(min-width:${({theme})=>theme.screen.tablet}){
         margin-top:200px;
@@ -22,6 +22,7 @@ export const BusinessContainer = styled.div`
 `
 
 export const BusinessMiniContainer = styled.div`
+    width:100%;
     height:100%;
     display: flex;
     flex-direction:column;
@@ -44,6 +45,9 @@ export const BusinessMiniContainer = styled.div`
     @media(min-width:${({theme})=>theme.screen.laptopM}){
         padding:5rem;
         padding-top:8rem;
+    }
+    @media(min-width:${({theme})=>theme.screen.desktop}){
+        padding:10rem
     }
 `
 
@@ -140,6 +144,9 @@ export const BusinessHeader = styled.header`
         @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:1rem;
         }
+        @media(min-width:${({theme})=>theme.screen.desktop}){
+            font-size:1.2rem
+        }
     }
 
     & > h2 {
@@ -152,6 +159,9 @@ export const BusinessHeader = styled.header`
 
         @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:3rem;
+        }
+        @media(min-width:${({theme})=>theme.screen.desktop}){
+            font-size:5rem
         }
     }
 
@@ -169,6 +179,9 @@ export const BusinessHeader = styled.header`
 
         @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:1.2rem;
+        }
+        @media(min-width:${({theme})=>theme.screen.desktop}){
+            font-size:1.5rem
         }
     }
 `
