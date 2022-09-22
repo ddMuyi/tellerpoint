@@ -273,7 +273,7 @@ export const HeroHeader = styled.header`
                         height:auto;
 
                         @media(min-width:${({theme})=>theme.screen.mobileS}){
-                            width:32px;
+                            width:38px;
                         }
 
                         @media(min-width:${({theme})=>theme.screen.laptopM}){
