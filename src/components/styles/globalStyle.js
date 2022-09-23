@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
     h1, h2, h3{
         font-family:"Clash Display", sans-serif;
         color:#000000;
+        font-weight:600;
     }
 
     .container {

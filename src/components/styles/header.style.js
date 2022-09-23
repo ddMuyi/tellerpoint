@@ -26,7 +26,7 @@ export const Container = styled.div`
     @media(min-width:${({theme})=>theme.screen.desktop}) {
         padding-left:0px;
         padding-right:0px;
-        width:80%;
+        width:90%;
         margin:0px auto;
     }
 `
@@ -79,6 +79,9 @@ export const Logo = styled.img.attrs(props=>({
 
     @media(min-width:${({theme})=>theme.screen.tablet}) {
         width:200px;
+    }
+    @media(min-width:${({theme})=>theme.screen.desktop}) {
+        width:auto;
     }
 `
 

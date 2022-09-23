@@ -39,8 +39,9 @@ export const BusinessMiniContainer = styled.div`
     }
 
     @media(min-width:${({theme})=>theme.screen.laptop}){
-        padding:2rem;
+        padding:3rem;
         background-color:${({theme})=>theme.colors.light_secondary};
+        padding-top:5rem;
     }
 
     @media(min-width:${({theme})=>theme.screen.laptopM}){
@@ -162,7 +163,7 @@ export const BusinessHeader = styled.header`
             font-size:3rem;
         }
         @media(min-width:${({theme})=>theme.screen.desktop}){
-            font-size:5rem
+            font-size:4rem
         }
     }
 
@@ -178,11 +179,11 @@ export const BusinessHeader = styled.header`
             font-size:1rem;
         }
 
-        @media(min-width:${({theme})=>theme.screen.laptopM}) {
+        /* @media(min-width:${({theme})=>theme.screen.laptopM}) {
             font-size:1.2rem;
-        }
+        } */
         @media(min-width:${({theme})=>theme.screen.desktop}){
-            font-size:1.5rem
+            font-size:1.5rem;
         }
     }
 `

@@ -25,7 +25,7 @@ const theme = {
     laptop: '1024px',
     laptopM: '1280px',
     laptopL: '1440px',
-    desktop: '2560px'
+    desktop: '1920px'
   }
 }
 

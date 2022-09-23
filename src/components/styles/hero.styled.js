@@ -5,7 +5,7 @@ function createCSS() {
   
     for (let i = 0; i < 4; i++) {
        styles += `
-        ${(i * 33.333) - 10}%, ${i * 33.333}% {
+        ${(i * 33.333) - 32}%, ${i * 33.333}% {
             transform: translateY(${(-100 / 4) * i}%);
             -webkit-transform: translateY(${(-100 / 4) * i}%);
             -ms-transform: translateY(${(-100 / 4) * i}%);
@@ -46,7 +46,7 @@ export const HeroContainer = styled.div`
     @media(min-width:${({theme})=>theme.screen.desktop}) {
         padding-left:0px;
         padding-right:0px;
-        width:80%;
+        width:90%;
         margin:0px auto;
     }
 
@@ -116,10 +116,16 @@ export const RightHeroInnerContainer = styled.div`
     }
 
     @media(min-width:${({theme})=>theme.screen.laptopM}) {
-        width:80%;
+        width:90%;
         gap:32px;
         margin-top:0;
     }
+
+    /* @media(min-width:${({theme})=>theme.screen.laptopM}) {
+        width:80%;
+        gap:32px;
+        margin-top:0;
+    } */
 `
 
 export const HeroImage = styled.img.attrs(props=>({
@@ -188,8 +194,12 @@ export const HeroHeader = styled.header`
         }
         
 
-        @media(min-width:${({theme})=>theme.screen.laptopM}){
-            font-size:1.2rem;
+        /* @media(min-width:${({theme})=>theme.screen.laptopM}){
+            font-size:1.1rem;
+        } */
+
+        @media(min-width:${({theme})=>theme.screen.desktop}){
+            font-size:1.5rem;
         }
     }
 
@@ -203,8 +213,16 @@ export const HeroHeader = styled.header`
             font-size:1rem;
         }
 
+        @media(min-width:${({theme})=>theme.screen.laptop}){
+            font-size:1.5rem;
+        }
+
         @media(min-width:${({theme})=>theme.screen.laptopM}){
             font-size:1.7rem;
+        }
+
+        @media(min-width:${({theme})=>theme.screen.desktop}){
+            font-size:2.5rem;
         }
 
         & > .second-line {
@@ -234,17 +252,21 @@ export const HeroHeader = styled.header`
                 height: 2.4rem;
             }
 
+            @media(min-width:${({theme})=>theme.screen.laptop}){
+                height: 3rem;
+            }
+
             @media(min-width:${({theme})=>theme.screen.laptopM}){
                 height:4.15rem;
+            }
+
+            @media(min-width:${({theme})=>theme.screen.desktop}){
+                height:5.2rem;
             }
 
             & > .animate-texts{
                 animation:scroll 6s linear infinite;
                 animation-delay: 2s;
-                /* -moz-animation:scroll 6s linear infinite;
-                -o-animation:scroll 6s linear infinite;
-                -webkit-animation:scroll 6s linear infinite;
-                -ms-animation:scroll 6s linear infinite; */
 
                 @keyframes scroll {
                     ${createCSS()}
@@ -256,6 +278,15 @@ export const HeroHeader = styled.header`
                     justify-content:flex-start;
                     gap:16px;
                     padding:0px;
+                    animation:disappear 2s ease infinite;
+                    animation-delay:2.1s;
+
+                    @keyframes disappear {
+                        0%{opacity:0}
+                        30%{opacity:1}
+                        95%{opacity:1}
+                        100%{opacity:0}
+                    }
 
                     & > h1 {
                         color:${({theme})=>theme.colors.primary};
@@ -316,6 +347,10 @@ export const HeroButton = styled.a.attrs((props)=>({
         padding:0px 48px;
         height:64px;
         font-size:1.2rem;
+    }
+
+    @media(min-width:${({theme})=>theme.screen.desktop}){
+        height:80px;
     }
 
     & > div {
