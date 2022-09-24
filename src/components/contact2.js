@@ -164,7 +164,7 @@ const Contact = () =>{
                                 </GlowContainer>
                             })}
                         </ParentGlowContainer>
-                        <ContactButton className='' href="https://wa.me/23408162264822" target="_blank">
+                        <ContactButton className='' href="mailto:help@tellerpoint.ng" target="_blank">
                             Contact sales
                             <img src={envelop} alt=""/>
                         </ContactButton>

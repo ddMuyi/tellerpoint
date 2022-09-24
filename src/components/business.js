@@ -119,7 +119,7 @@ const Business = () =>{
                         <h2>Cross sell and earn <Br/>extra income from <Br/>your customers</h2>
                         <p className='description'>Shop owners leverage the Tellerpoint platform to offer <Br/>over-the-counter bank teller services in their <Br/>communities for a fee and many other benefits. </p>
 
-                        <BusinessButton className=''>
+                        <BusinessButton className='' href="https://wa.me/23408162264822" target="_blank">
                             Become an agent
                             <img className='bounce' src={envelop} alt=""/>
                         </BusinessButton>

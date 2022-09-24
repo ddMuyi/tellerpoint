@@ -188,7 +188,10 @@ export const BusinessHeader = styled.header`
     }
 `
 
-export const BusinessButton = styled.button`
+export const BusinessButton = styled.a.attrs((props)=>({
+    href:props.href,
+    target:props.target
+}))`
     width: auto;
     height:40px;
     font-weight:500;
@@ -199,9 +202,10 @@ export const BusinessButton = styled.button`
     border-radius:999px;
     border:none;
     padding:0 24px;
-    display:flex;
+    display:inline-flex;
     align-items:center;
     gap:16px;
+    text-decoration:none;
 
     @media(min-width:${({theme})=>theme.screen.mobileS}){
         font-size:18px;
