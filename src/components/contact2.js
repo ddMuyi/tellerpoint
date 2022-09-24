@@ -164,7 +164,7 @@ const Contact = () =>{
                                 </GlowContainer>
                             })}
                         </ParentGlowContainer>
-                        <ContactButton className=''>
+                        <ContactButton className='' href="https://wa.me/23408162264822" target="_blank">
                             Contact sales
                             <img src={envelop} alt=""/>
                         </ContactButton>

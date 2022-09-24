@@ -253,7 +253,10 @@ export const ParentGlowContainer = styled.div`
     justify-content: start;
 `
 
-export const ContactButton = styled.button`
+export const ContactButton = styled.a.attrs((props)=>({
+    href:props.href,
+    target:props.target
+}))`
     width: auto;
     height:40px;
     font-weight:500;
@@ -264,9 +267,10 @@ export const ContactButton = styled.button`
     border-radius:999px;
     border:none;
     padding:0 24px;
-    display:flex;
+    display:inline-flex;
     align-items:center;
     gap:16px;
+    text-decoration:none;
 
     @media(min-width:${({theme})=>theme.screen.mobileS}){
         font-size:18px;
