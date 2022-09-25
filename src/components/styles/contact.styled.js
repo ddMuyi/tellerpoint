@@ -39,9 +39,11 @@ export const ContactMiniContainer = styled.div`
     @media(min-width:${({theme})=>theme.screen.laptopM}){
         padding:5rem;
         padding-top:8rem;
+        padding-bottom:0px;
     }
     @media(min-width:${({theme})=>theme.screen.desktop}){
         padding:10rem
+        padding-bottom:0px;
     }
 `
 

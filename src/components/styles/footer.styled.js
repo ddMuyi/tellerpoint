@@ -42,12 +42,8 @@ export const FooterInnerContainer = styled.div`
         font-size:16px;
         margin-top:24px;
         font-weight:500;
-
         @media(min-width:${({theme})=>theme.screen.mobileS}){
-            font-size:18px;
-        }
-        @media(min-width:${({theme})=>theme.screen.mobileS}){
-            font-size:20px;
+            font-size:1.125rem;
         }
     }
 `
