@@ -42,7 +42,7 @@ const Sponsors = () =>{
             <SponsorContainer className='container'>
                 <SponsorMiniContainer>
                     <SponsorHeader>
-                        <h3>Supported by banking and payments industry leaders</h3>
+                        <h3>Supported by banking and payments <Br/>industry leaders</h3>
                         <p>Tellerpoint services are delivered in partnership with strong local financial <Br/>institutions and payments companies in Nigeria</p>
                     </SponsorHeader>
 

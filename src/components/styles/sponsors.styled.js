@@ -36,22 +36,34 @@ export const SponsorHeader = styled.header`
     z-index:1;
 
     & > p {
-        font-size:16px;
+        font-size:0.8rem;
         font-weight:500;
         color:#555555;
         margin-top:24px;
+        line-height:2rem;
 
-        @media(min-width:${({theme})=>theme.screen.tablet}){
-            font-size:24px;
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:1rem;
+        }
+
+        @media(min-width:${({theme})=>theme.screen.desktop}){
+            font-size:1.5rem;
         }
     }
 
     & > h3{
         font-size:1.2rem;
 
-        @media(min-width:${({theme})=>theme.screen.tablet}){
-            font-size:2.1rem;
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:1.25rem;
         }
+
+        @media(min-width:${({theme})=>theme.screen.laptopM}) {
+            font-size:3rem;
+        }
+        /* @media(min-width:${({theme})=>theme.screen.desktop}){
+            font-size:4rem
+        } */
     }
 `
 

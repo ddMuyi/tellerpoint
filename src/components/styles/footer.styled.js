@@ -46,6 +46,9 @@ export const FooterInnerContainer = styled.div`
         @media(min-width:${({theme})=>theme.screen.mobileS}){
             font-size:18px;
         }
+        @media(min-width:${({theme})=>theme.screen.mobileS}){
+            font-size:20px;
+        }
     }
 `
 
