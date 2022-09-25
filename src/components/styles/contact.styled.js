@@ -42,7 +42,7 @@ export const ContactMiniContainer = styled.div`
         padding-bottom:0px;
     }
     @media(min-width:${({theme})=>theme.screen.desktop}){
-        padding:10rem
+        padding:10rem;
         padding-bottom:0px;
     }
 `
