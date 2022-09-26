@@ -99,15 +99,9 @@ const Business = () =>{
                 duration:0.5,
                 y:0,
             }, "+200%")
-            .to('#secondBigImageRow',{
-                duration:0.5,
-                y:0,
-            }, "+220%")
-            .to('#secondBigImageRow',{
-                duration:0.5,
-                y:0,
-            }, "+240%")
         }
+
+        return ()=>false
 
     }, [innerWidth])
 

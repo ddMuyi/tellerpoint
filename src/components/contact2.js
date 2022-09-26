@@ -103,14 +103,6 @@ const Contact = () =>{
                 duration:0.5,
                 y:0,
             }, "+180%")
-            .to('.thirdIconRow',{
-                duration:0.5,
-                y:0,
-            }, "+200%")
-            .to('.thirdIconRow',{
-                duration:0.5,
-                y:0,
-            }, "+250%")
         }
 
         else {
@@ -136,6 +128,8 @@ const Contact = () =>{
             })
             
         }
+
+        return ()=>false
     }, [innerWidth])
 
     useEffect(()=>{
