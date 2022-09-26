@@ -68,7 +68,6 @@ const Business = () =>{
             let firstImage = document.querySelector('.bigman')
             firstImage.style.height = `${left.offsetHeight}px`
             let test = document.querySelector('.firstBigImageRow')
-            console.log(test)
             gsap.timeline({
                 scrollTrigger:{
                     trigger:".businessContainer",
@@ -89,19 +88,32 @@ const Business = () =>{
             })
             .to('.scrollingElement',{
                 duration:0.5,
-                y:-(left.offsetHeight)
+                scrollTo: {y:-(left.offsetHeight), autoKill: true},
+                // y:-(left.offsetHeight)
             }, "+170%")
             .to('.scrollingElement',{
                 duration:0.5,
-                y:-(left.offsetHeight)
+                scrollTo: {y:-(left.offsetHeight), autoKill: true},
+                // y:-(left.offsetHeight)
             }, "+180%")
             .to('#secondBigImageRow',{
                 duration:0.5,
-                y:0,
+                scrollTo: {y:0, autoKill: true},
+                // y:0,
             }, "+200%")
+            .to('#secondBigImageRow',{
+                duration:0.5,
+                scrollTo: {y:0, autoKill: true},
+                // y:0,
+            }, "+220%")
+            .to('#secondBigImageRow',{
+                duration:0.5,
+                scrollTo: {y:0, autoKill: true},
+                // y:0,
+            }, "+240%")
         }
 
-        return ()=>false
+        return ()=>{}
 
     }, [innerWidth])
 
