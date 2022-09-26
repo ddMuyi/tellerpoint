@@ -128,7 +128,8 @@ const Contact = () =>{
                         trigger: item,
                         start: "top bottom-=100",
                         end: "bottom top+=100",
-                        toggleActions: "play reverse play reverse"
+                        toggleActions: "play reverse play reverse",
+                        ignoreMobileResize: true
                     }
       
                 })

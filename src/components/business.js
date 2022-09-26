@@ -76,6 +76,7 @@ const Business = () =>{
                     pin:true,
                     start: "50% 50%",
                     end: "+=250%",
+                    ignoreMobileResize: true
                 }
             })
             .from('.small-cont', {
@@ -90,9 +91,9 @@ const Business = () =>{
                 duration:0.5,
                 y:-(left.offsetHeight)
             }, "+170%")
-            .to('#secondBigImageRow',{
+            .to('.scrollingElement',{
                 duration:0.5,
-                y:0,
+                y:-(left.offsetHeight)
             }, "+180%")
             .to('#secondBigImageRow',{
                 duration:0.5,
@@ -101,7 +102,11 @@ const Business = () =>{
             .to('#secondBigImageRow',{
                 duration:0.5,
                 y:0,
-            }, "+250%")
+            }, "+220%")
+            .to('#secondBigImageRow',{
+                duration:0.5,
+                y:0,
+            }, "+240%")
         }
 
     }, [innerWidth])

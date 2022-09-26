@@ -54,7 +54,8 @@ export const LogoImg = styled.img.attrs((props)=>({
 }))`
     display:block;
     height: auto;
-    width: auto;
+    width: 220px;
+    filter:opacity(1);
 `
 
 export const Br = styled.br`
