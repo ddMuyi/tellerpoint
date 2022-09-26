@@ -93,28 +93,23 @@ const Contact = () =>{
             })
             .to('.scrollElement',{
                 duration:0.5,
-                scrollTo: {y:-(left.offsetHeight), autoKill: true},
-                // y:-left.offsetHeight
+                y:-left.offsetHeight
             }, "+170%")
             .to('.secondIconRow',{
                 duration:0.5,
-                scrollTo: {y:0, autoKill: true},
-                // y:0,
+                y:0,
             }, "+175%")
             .to('.thirdIconRow',{
                 duration:0.5,
-                scrollTo: {y:0, autoKill: true},
-                // y:0,
+                y:0,
             }, "+180%")
             .to('.thirdIconRow',{
                 duration:0.5,
-                scrollTo: {y:0, autoKill: true},
-                // y:0,
+                y:0,
             }, "+200%")
             .to('.thirdIconRow',{
                 duration:0.5,
-                scrollTo: {y:0, autoKill: true},
-                // y:0,
+                y:0,
             }, "+250%")
         }
 

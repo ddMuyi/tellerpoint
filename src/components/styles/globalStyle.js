@@ -6,7 +6,6 @@ const GlobalStyles = createGlobalStyle`
         margin:0;
         padding:0;
         -webkit-font-smoothing: antialiased;
-        scroll-behavior: smooth;
         -moz-osx-font-smoothing: grayscale;
         color:${({theme})=>theme.colors.text}
     }
