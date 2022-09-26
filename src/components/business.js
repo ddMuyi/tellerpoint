@@ -67,7 +67,6 @@ const Business = () =>{
             let left = document.querySelector(".left-cont")
             let firstImage = document.querySelector('.bigman')
             firstImage.style.height = `${left.offsetHeight}px`
-            let test = document.querySelector('.firstBigImageRow')
             gsap.timeline({
                 scrollTrigger:{
                     trigger:".businessContainer",
