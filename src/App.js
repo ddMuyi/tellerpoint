@@ -7,6 +7,10 @@ import Contact from './components/contact2';
 import Business from './components/business';
 import Sponsors from './components/sponsors';
 import Footer from './components/footer';
+import React, {useEffect} from 'react';
+import AOS from 'aos';
+import "aos/dist/aos.css"
+  
 
 const theme = {
   colors:{
@@ -30,6 +34,11 @@ const theme = {
 }
 
 function App() {
+  useEffect(()=>{
+    AOS.init({
+      duration: 2000,
+    })
+  }, [])
   return (
     <ThemeProvider theme={theme}>
       <>

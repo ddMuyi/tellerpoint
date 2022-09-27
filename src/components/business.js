@@ -31,12 +31,12 @@ const Business = () =>{
     const Mobile = () =>{
         return <>
             <RightImageCont className='firstBigImageRow'>
-                <OtherRightImage src={img1}  className="fade-in-items"/>
-                <OtherRightImage src={img2}  className="fade-in-items"/>
-                <OtherRightImage src={img3}  className="fade-in-items"/>
-                <OtherRightImage src={img4}  className="fade-in-items"/>
-                <OtherRightImage src={img5}  className="fade-in-items"/>
-                <OtherRightImage src={img6}  className="fade-in-items"/>
+                <OtherRightImage  data-aos="fade-up" src={img1}  className="fade-in-items"/>
+                <OtherRightImage  data-aos="fade-up" src={img2}  className="fade-in-items"/>
+                <OtherRightImage  data-aos="fade-up" src={img3}  className="fade-in-items"/>
+                <OtherRightImage  data-aos="fade-up" src={img4}  className="fade-in-items"/>
+                <OtherRightImage  data-aos="fade-up" src={img5}  className="fade-in-items"/>
+                <OtherRightImage  data-aos="fade-up" src={img6}  className="fade-in-items"/>
             </RightImageCont>
         </>
     }

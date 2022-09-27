@@ -50,14 +50,14 @@ const TabUpwards = () =>{
 const Mobile = () =>{
     return <>
         <RightImageCont className='firstIconRow'>
-            <OtherRightImage src={img1} className="fade-in-items"/>
-            <OtherRightImage src={img2} className="fade-in-items"/>
-            <OtherRightImage src={img3} className="fade-in-items"/>
-            <OtherRightImage src={img4} className="fade-in-items"/>
-            <OtherRightImage src={img5} className="fade-in-items"/>
-            <OtherRightImage src={img6} className="fade-in-items"/>
-            <OtherRightImage src={img7} className="fade-in-items"/>
-            <OtherRightImage src={img8} className="fade-in-items"/>
+            <OtherRightImage data-aos="fade-up" src={img1} className="fade-in-items"/>
+            <OtherRightImage data-aos="fade-up" src={img2} className="fade-in-items"/>
+            <OtherRightImage data-aos="fade-up" src={img3} className="fade-in-items"/>
+            <OtherRightImage data-aos="fade-up" src={img4} className="fade-in-items"/>
+            <OtherRightImage data-aos="fade-up" src={img5} className="fade-in-items"/>
+            <OtherRightImage data-aos="fade-up" src={img6} className="fade-in-items"/>
+            <OtherRightImage data-aos="fade-up" src={img7} className="fade-in-items"/>
+            <OtherRightImage data-aos="fade-up" src={img8} className="fade-in-items"/>
         </RightImageCont>
     </>
 }
@@ -113,29 +113,29 @@ const Contact = () =>{
             }, "+250%")
         }
 
-        else {
-            let items = document.querySelectorAll('.fade-in-items')
+        // else {
+        //     let items = document.querySelectorAll('.fade-in-items')
 
-            items.forEach(item=>{
-                gsap.set(item, {y:100, opacity:0})
-                gsap.to(item, {
-                    duration: 0.2,
-                    autoAlpha:1,
-                    y: 0,
-                    opacity:1,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: item,
-                        start: "top bottom-=100",
-                        end: "bottom top+=100",
-                        toggleActions: "play reverse play reverse",
-                        ignoreMobileResize: true
-                    }
+        //     items.forEach(item=>{
+        //         gsap.set(item, {y:100, opacity:0})
+        //         gsap.to(item, {
+        //             duration: 0.2,
+        //             autoAlpha:1,
+        //             y: 0,
+        //             opacity:1,
+        //             ease: "power2.out",
+        //             scrollTrigger: {
+        //                 trigger: item,
+        //                 start: "top bottom-=100",
+        //                 end: "bottom top+=100",
+        //                 toggleActions: "play reverse play reverse",
+        //                 ignoreMobileResize: true
+        //             }
       
-                })
-            })
+        //         })
+        //     })
             
-        }
+        // }
     }, [innerWidth])
 
     useEffect(()=>{
