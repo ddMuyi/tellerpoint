@@ -36,7 +36,7 @@ const theme = {
 function App() {
   useEffect(()=>{
     AOS.init({
-      duration: 2000,
+      duration: 600,
     })
   }, [])
   return (
