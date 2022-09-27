@@ -39,6 +39,18 @@ function App() {
       duration: 600,
     })
   }, [])
+
+  useEffect(()=>{
+    window.addEventListener("hashchange", function(){
+      if(window.location.hash === "") {
+        window.scrollTo({
+          top:0
+        })
+      }
+    });
+  }, [])
+
+  
   return (
     <ThemeProvider theme={theme}>
       <>
