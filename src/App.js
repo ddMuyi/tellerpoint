@@ -46,7 +46,6 @@ function App() {
         <NavBar/>
         <Hero/>
         <Contact/>
-        {/* <Contact/> */}
         <Business/>
         <Sponsors/>
         <Footer/>

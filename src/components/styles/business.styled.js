@@ -115,7 +115,7 @@ export const RightInnerContainer = styled.div`
         }
         @media(min-width:${({theme})=>theme.screen.laptop}){
             margin-top:24px;
-            transform:translateY(300px);
+            transform:translateY(100vh);
         }
     }
 `
@@ -192,7 +192,7 @@ export const BusinessButton = styled.a.attrs((props)=>({
     href:props.href,
     target:props.target
 }))`
-    width: auto;
+    width: 240px;
     height:40px;
     font-weight:500;
     font-size:0.8rem;
@@ -201,8 +201,8 @@ export const BusinessButton = styled.a.attrs((props)=>({
     margin-top:32px;
     border-radius:999px;
     border:none;
-    padding:0 24px;
-    display:inline-flex;
+    display:flex;
+    justify-content:center;
     align-items:center;
     gap:16px;
     text-decoration:none;
@@ -215,7 +215,7 @@ export const BusinessButton = styled.a.attrs((props)=>({
     @media(min-width:${({theme})=>theme.screen.laptopM}){
         font-size:24px;
         margin-top:42px;
-        padding:0 32px;
+        width:315px;
         height:64px;
     }
 

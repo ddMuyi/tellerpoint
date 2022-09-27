@@ -112,30 +112,6 @@ const Contact = () =>{
                 y:0,
             }, "+250%")
         }
-
-        // else {
-        //     let items = document.querySelectorAll('.fade-in-items')
-
-        //     items.forEach(item=>{
-        //         gsap.set(item, {y:100, opacity:0})
-        //         gsap.to(item, {
-        //             duration: 0.2,
-        //             autoAlpha:1,
-        //             y: 0,
-        //             opacity:1,
-        //             ease: "power2.out",
-        //             scrollTrigger: {
-        //                 trigger: item,
-        //                 start: "top bottom-=100",
-        //                 end: "bottom top+=100",
-        //                 toggleActions: "play reverse play reverse",
-        //                 ignoreMobileResize: true
-        //             }
-      
-        //         })
-        //     })
-            
-        // }
     }, [innerWidth])
 
     useEffect(()=>{

@@ -120,7 +120,7 @@ const Business = () =>{
                 {/* <AestheticImage src={aesthetic}/> */}
                 <LeftContainer className="left-cont">
                     <BusinessHeader>
-                        <p className='intro'>tellerpoint for business  <img src={business} alt=""/></p>
+                        <p className='intro'>tellerpoint for businesses  <img src={business} alt=""/></p>
                         <h2>Cross sell and earn <Br/>extra income from <Br/>your customers</h2>
                         <p className='description'>Shop owners leverage the Tellerpoint platform to offer <Br/>over-the-counter bank teller services in their <Br/>communities for a fee and many other benefits. </p>
 
@@ -143,7 +143,6 @@ const Business = () =>{
                 </RightContainer>
                 </BusinessMiniContainer>
             </BusinessContainer>
-            {/* <div style={{height:'100px'}}></div> */}
         </div>
     )
 }

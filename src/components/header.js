@@ -20,8 +20,8 @@ const NavBar = () =>{
         <Container>
             <Logo Img={logo}/>
             <Nav>
-                <Links href="#instituition">for instituition</Links>
-                <Links href="#business">for business</Links>
+                <Links href="#instituition">for instituitions</Links>
+                <Links href="#business">for businesses</Links>
             </Nav>
             <BurgerButton onClick={()=>setOpen(!open)}>
                 {open ? <>&#215;</> : <>&#8801;</>}
